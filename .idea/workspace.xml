@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="JupyterTrust" id="a1ae9549-004b-404e-9639-e0e4d2b91773" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kkH71Fg4Z4UUlxfBOmJlIe1XQl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="" />
+      <created>1606237497232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606237497232</updated>
+      <workItem from="1606237498282" duration="39000" />
+      <workItem from="1606237546437" duration="1155000" />
+      <workItem from="1606238721949" duration="208000" />
+      <workItem from="1606238977645" duration="1242000" />
+      <workItem from="1606819809965" duration="8000" />
+      <workItem from="1607441662866" duration="1357000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1200" y="274" key="#Project_Structure" timestamp="1606238869089">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1200" y="274" key="#Project_Structure/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238869089" />
+    <state x="1296" y="345" key="#SSH_Configurations" timestamp="1606239617577">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1296" y="345" key="#SSH_Configurations/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239617577" />
+    <state x="1500" y="455" key="FileChooserDialogImpl" timestamp="1606238922363">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238922363" />
+    <state x="1221" y="345" key="SettingsEditor" timestamp="1606239618706">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1221" y="345" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239618706" />
+    <state x="1560" y="430" key="ftp.server.browser" timestamp="1606239524843">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1560" y="430" key="ftp.server.browser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239524843" />
+    <state x="1311" y="351" key="new project wizard" timestamp="1606238929493">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238929493" />
+    <state x="1587" y="592" key="publish.login" timestamp="1606239541587">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1587" y="592" key="publish.login/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239541587" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
