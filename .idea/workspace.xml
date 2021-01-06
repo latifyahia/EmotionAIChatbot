@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="" />
+    <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="a1ae9549-004b-404e-9639-e0e4d2b91773" />
   <component name="MavenImportPreferences">
@@ -16,19 +54,118 @@
     </option>
   </component>
   <component name="ProjectId" id="1kkH71Fg4Z4UUlxfBOmJlIe1XQl" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="jdk.selected.PYTHON_MODULE" value="Python 3.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="Jupyter Settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\EmotionAIChatbot" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="quickstart-script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ChatBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/azure" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/azure/quickstart-script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quickstart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ChatBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/azure" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/azure/quickstart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ChatBot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EmotionalAIChatbot/chatbot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.quickstart" />
+        <item itemvalue="Python.quickstart-script" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -43,37 +180,77 @@
       <workItem from="1606238721949" duration="208000" />
       <workItem from="1606238977645" duration="1242000" />
       <workItem from="1606819809965" duration="8000" />
-      <workItem from="1607441662866" duration="1357000" />
+      <workItem from="1607441662866" duration="1970000" />
+      <workItem from="1607447660501" duration="4000" />
+      <workItem from="1607447677360" duration="12000" />
+      <workItem from="1607610305951" duration="13000" />
+      <workItem from="1609885383798" duration="2147000" />
+      <workItem from="1609887724095" duration="870000" />
+      <workItem from="1609888611651" duration="4923000" />
+      <workItem from="1609895043052" duration="6832000" />
+      <workItem from="1609902474248" duration="1272000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1200" y="274" key="#Project_Structure" timestamp="1606238869089">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="-1250" y="340" key="#Project_Structure" timestamp="1609889713385">
+      <screen x="-1920" y="152" width="1920" height="1040" />
     </state>
+    <state x="-1250" y="340" key="#Project_Structure/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609889713385" />
     <state x="1200" y="274" key="#Project_Structure/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238869089" />
     <state x="1296" y="345" key="#SSH_Configurations" timestamp="1606239617577">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1296" y="345" key="#SSH_Configurations/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239617577" />
-    <state x="1500" y="455" key="FileChooserDialogImpl" timestamp="1606238922363">
+    <state x="-1083" y="490" key="FileChooserDialogImpl" timestamp="1609893538770">
+      <screen x="-1920" y="152" width="1920" height="1040" />
+    </state>
+    <state x="-1083" y="490" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609893538770" />
+    <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1607447645045" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1609903119359">
+      <screen x="-1920" y="152" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609903119359" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1609903119359">
+      <screen x="-1920" y="152" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609903119359" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1609903119359">
+      <screen x="-1920" y="152" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609903119359" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1609903119359">
+      <screen x="-1920" y="152" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609903119359" />
+    <state x="431" y="344" key="SettingsEditor" timestamp="1609902646038">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238922363" />
-    <state x="1221" y="345" key="SettingsEditor" timestamp="1606239618706">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
+    <state x="431" y="344" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609902646038" />
     <state x="1221" y="345" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239618706" />
     <state x="1560" y="430" key="ftp.server.browser" timestamp="1606239524843">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1560" y="430" key="ftp.server.browser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239524843" />
-    <state x="1311" y="351" key="new project wizard" timestamp="1606238929493">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="-1188" y="413" width="1101" height="699" key="new project wizard" timestamp="1609893418424">
+      <screen x="-1920" y="152" width="1920" height="1040" />
     </state>
+    <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609893418424" />
     <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238929493" />
     <state x="1587" y="592" key="publish.login" timestamp="1606239541587">
       <screen x="0" y="0" width="3440" height="1400" />
@@ -83,5 +260,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ChatBot$quickstart.coverage" NAME="quickstart Coverage Results" MODIFIED="1609890162596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/azure" />
+    <SUITE FILE_PATH="coverage/ChatBot$quickstart_script.coverage" NAME="quickstart-script Coverage Results" MODIFIED="1609888873371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/azure" />
+    <SUITE FILE_PATH="coverage/ChatBot$views.coverage" NAME="views Coverage Results" MODIFIED="1609903119345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EmotionalAIChatbot/chatbot" />
   </component>
 </project>
