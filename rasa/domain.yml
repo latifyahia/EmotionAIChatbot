@@ -62,7 +62,7 @@ responses:
 
 
 actions:
-  - action_submit
+  - action_submit_name
   - action_submit_good_day
 forms:
   name_form:

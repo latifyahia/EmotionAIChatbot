@@ -27,7 +27,7 @@ rules:
   - active_loop: null
   - slot_was_set:
       - requested_slot: null
-  - action: action_submit
+  - action: action_submit_name
 
 
 - rule: Activate form good day

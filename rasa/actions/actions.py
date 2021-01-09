@@ -35,7 +35,7 @@ class ActionSubmit(Action):
 
 
     def name(self) -> Text:
-        return "action_submit"
+        return "action_submit_name"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
