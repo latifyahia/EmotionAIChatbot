@@ -5,13 +5,38 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
+  - mood_happy
+  - day_info_celebrations:
+      use_entities:
+        - celebration
   - mood_unhappy
+  - my_name:
+      use_entities:
+        - name
   - bot_challenge
+  - celebrations:
+      use_entities:
+        - celebration
+
+entities:
+  - name
+  - celebration
+
+
+slots:
+  name:
+    type: text
+  celebration:
+    type: text
+
+
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey there! May i have your name?"
+
+  utter_ask_name:
+    - text: "Thank you {name}, i'm Lolly your emotional AI chatbot. How are you today?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -21,13 +46,33 @@ responses:
   - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great, tell me about your day!"
+
+  utter_unhappy:
+    - text: "I understand, everyone has these types of days. If you dont mind, tell me about your day!"
 
   utter_goodbye:
   - text: "Bye"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_day_response_happy:
+  - text: "Thats great to hear, It seems like you had fun at the {celebration}"
+
+
+actions:
+  - action_submit
+  - action_submit_good_day
+forms:
+  name_form:
+    name:
+      - type: from_entity
+        entity: name
+  celebration_form:
+    celebration:
+      - type: from_entity
+        entity: celebration
 
 session_config:
   session_expiration_time: 60
