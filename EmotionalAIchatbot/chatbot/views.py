@@ -16,6 +16,8 @@ from msrest.authentication import CognitiveServicesCredentials
 # Create your views here.
 def home(request):
 
+
+    #- EXAMPLE CODE TAKEN FROM https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/python/Face/rest/detect.py *
     # This key will serve all examples in this document.
     KEY = "d814559c8ef445b5abb3e834eb7de8e9"
 
@@ -25,7 +27,7 @@ def home(request):
     face_client = FaceClient(ENDPOINT, CognitiveServicesCredentials(KEY))
 
     # Image of face(s)
-    face1_url = 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Kristofer_Hivju_%28Cropped%2C_2015%29.jpg'
+    face1_url = 'https://media-exp1.licdn.com/dms/image/C5603AQGQQIx5sDcX4A/profile-displayphoto-shrink_200_200/0/1587739656825?e=1616025600&v=beta&t=teG4BtNkF89RJRQijlleL7pRcaUkCNTfUebxx3vmHx0'
     face2_url = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_famous_mustache_and_goatee.jpg/220px-The_famous_mustache_and_goatee.jpg'
 
     # List of url images
