@@ -13,5 +13,45 @@ stories:
     - intent: mood_happy
     - action: utter_happy
 
+#- story: interactive_story_1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#
+#- story: interactive_story_2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: my_name
+#    entities:
+#    - name: latif
+#  - slot_was_set:
+#    - name: latif
+#  - action: name_form
+#  - active_loop: name_form
+#  - slot_was_set:
+#    - name: latif
+#  - slot_was_set:
+#    - name: latif
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: action_submit_name
+#  - intent: mood_happy
+#  - action: utter_happy
 
-
+- story: introduction name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: my_name
+    entities:
+    - name: latif
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - name: latif
+  - active_loop: null
+  - action: action_submit_name
+  - intent: mood_happy
+  - action: utter_happy

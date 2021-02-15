@@ -1,7 +1,5 @@
 version: "2.0"
-
 nlu:
-
 - intent: greet
   examples: |
     - hey
@@ -17,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - cu
@@ -30,7 +27,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +35,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,76 +44,63 @@ nlu:
     - don't like that
     - no way
     - not really
-
-
 - intent: my_name
   examples: |
-    -my name is [latif]{"entity":"name" , "value":"latif"}
-    -[latif]{"entity":"name", "value":"latif"} is my name
-    -i go by the name of [latif]{"entity":"name", "value":"latif"}
-
-#- synonym: name
-#  examples: |
-#    -tofi
-#    -latif
-#    -arron
-#    -michael
-#    -mary
-
-
-
+    - my name is [latif](name)
+    - [latif](name) is my name
+    - i go by the name of [latif](name)
+    - my name is [latif](name)
 - intent: mood_happy
   examples: |
-    -I am feeling very good
-    -I am great
-    -I am amazing
-    -I am going to save the world
-    -super stoked
-    -extremely good
-    -so so perfect
-    -so good
-    -so perfect
-    -perfect
-    -great
-    -amazing
-    -feeling like a king
-    -wonderful
-
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - im feeling very good
+    - im feeling good
+    - im feeling good thanks
 - intent: mood_unhappy
   examples: |
-    -I'm so sad
-    -very sad
-    -not very good
-    -extremly sad
-    -so saad
-    -so sad
-    -my day was horrible
-    -I am sad
-    -I don't feel very well
-    -I am disappointed
-    -super sad
-    -im unhappy
-    -im not good
-    -im very sad
-
+    - I'm so sad
+    - very sad
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - im unhappy
+    - im not good
+    - im very sad
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-
 - intent: day_info_celebrations
   examples: |
-    -[birthday]{"entity":"celebration","value":"birthday"}
-    -[celebration] {"entity":"celebration","value":"celebration"}
-    -[party] {"entity":"celebration","value":"party"}
-    -[wedding] {"entity":"celebration","value":"wedding"}
-    -[christmas] {"entity":"celebration","value":"christmas"}
-    -[easter] {"entity":"celebration","value":"easter"}
-    -[weekend] {"entity":"celebration","value":"weekend"}
-    -[nightclub] {"entity":"celebration","value":"nightclub"}
-    -[graduation] {"entity":"celebration","value":"graduation"}
-    -[festival] {"entity":"celebration","value":"festival"}
-
+    - [birthday](celebration)
+    - [celebration] {"entity":"celebration","value":"celebration"}
+    - [party] {"entity":"celebration","value":"party"}
+    - [wedding] {"entity":"celebration","value":"wedding"}
+    - [christmas] {"entity":"celebration","value":"christmas"}
+    - [easter] {"entity":"celebration","value":"easter"}
+    - [weekend] {"entity":"celebration","value":"weekend"}
+    - [nightclub] {"entity":"celebration","value":"nightclub"}
+    - [graduation] {"entity":"celebration","value":"graduation"}
+    - [festival] {"entity":"celebration","value":"festival"}
+    - my day has been very good, i went to a party today

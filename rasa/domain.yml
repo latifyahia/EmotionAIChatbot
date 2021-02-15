@@ -1,79 +1,70 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_happy
-  - day_info_celebrations:
-      use_entities:
-        - celebration
-  - mood_unhappy
-  - my_name:
-      use_entities:
-        - name
-  - bot_challenge
-  - celebrations:
-      use_entities:
-        - celebration
-
-entities:
-  - name
-  - celebration
-
-
-slots:
-  name:
-    type: text
-  celebration:
-    type: text
-
-
-
-responses:
-  utter_greet:
-  - text: "Hey there! May i have your name?"
-
-  utter_ask_name:
-    - text: "Thank you {name}, i'm Lolly your emotional AI chatbot. How are you today?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, tell me about your day!"
-
-  utter_unhappy:
-    - text: "I understand, everyone has these types of days. If you dont mind, tell me about your day!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_day_response_happy:
-  - text: "Thats great to hear, It seems like you had fun at the {celebration}"
-
-
-actions:
-  - action_submit_name
-  - action_submit_good_day
-forms:
-  name_form:
-    name:
-      - type: from_entity
-        entity: name
-  celebration_form:
-    celebration:
-      - type: from_entity
-        entity: celebration
-
+version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- mood_happy
+- greet
+- my_name:
+    use_entities:
+    - name
+- day_info_celebrations:
+    use_entities:
+    - celebration
+- goodbye
+- affirm
+- deny
+- mood_unhappy
+- bot_challenge
+- celebrations:
+    use_entities:
+    - celebration
+entities:
+- celebration
+- name
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  celebration:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: text
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey there! May i have your name?
+  utter_ask_name:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. How are you today?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, tell me about your day!
+  utter_unhappy:
+  - text: I understand, everyone has these types of days. If you dont mind, tell me about your day!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_day_response_happy:
+  - text: Thats great to hear, It seems like you had fun at the {celebration}
+actions:
+- action_submit_good_day
+- action_submit_name
+- utter_ask_name
+- utter_day_response_happy
+- utter_greet
+- utter_happy
+forms:
+  name_form:
+    name:
+    - type: from_entity
+      entity: name
+  celebration_form:
+    celebration:
+    - type: from_entity
+      entity: celebration

@@ -12,39 +12,40 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Activate form
-  steps:
-  - intent: my_name
-  - action: name_form
-  - active_loop: name_form
+#- rule: Activate form
+#  steps:
+#  - intent: my_name
+#  - action: utter_ask_name
+#  - action: name_form
+#  - active_loop: name_form
+#
+#
+#- rule: Submit form
+#  condition:
+#  - active_loop: name_form
+#  steps:
+#  - action: name_form
+#  - active_loop: null
+#  - slot_was_set:
+#      - requested_slot: null
+#  - action: action_submit_name
 
 
-- rule: Submit form
-  condition:
-  - active_loop: name_form
-  steps:
-  - action: name_form
-  - active_loop: null
-  - slot_was_set:
-      - requested_slot: null
-  - action: action_submit_name
-
-
-- rule: Activate form good day
-  steps:
-    - intent: day_info_celebrations
-    - action: celebration_form
-    - active_loop: celebration_form
-
-
-- rule: Submit form good day
-  condition:
-    - active_loop: celebration_form
-  steps:
-    - action: celebration_form
-    - active_loop: null
-    - slot_was_set:
-        - requested_slot: null
-    - action: action_submit_good_day
+#- rule: Activate form good day
+#  steps:
+#    - intent: day_info_celebrations
+#    - action: celebration_form
+#    - active_loop: celebration_form
+#
+#
+#- rule: Submit form good day
+#  condition:
+#    - active_loop: celebration_form
+#  steps:
+#    - action: celebration_form
+#    - active_loop: null
+#    - slot_was_set:
+#        - requested_slot: null
+#    - action: action_submit_good_day
 
 
