@@ -31,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/models.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +187,14 @@
       <workItem from="1610146895429" duration="21879000" />
       <workItem from="1610213330738" duration="12120000" />
       <workItem from="1610226741851" duration="11000" />
-      <workItem from="1610292777583" duration="4072000" />
+      <workItem from="1610292777583" duration="4366000" />
+      <workItem from="1610450791841" duration="2661000" />
+      <workItem from="1611743193875" duration="1201000" />
+      <workItem from="1611843505551" duration="19000" />
+      <workItem from="1612350124498" duration="1553000" />
+      <workItem from="1612951721178" duration="4286000" />
+      <workItem from="1613052755322" duration="87000" />
+      <workItem from="1613556375334" duration="1085000" />
     </task>
     <servers />
   </component>
@@ -253,10 +261,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1560" y="430" key="ftp.server.browser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239524843" />
-    <state x="-1188" y="413" width="1101" height="699" key="new project wizard" timestamp="1609893418424">
+    <state x="-1188" y="413" width="1101" height="699" key="new project wizard" timestamp="1613052840541">
       <screen x="-1920" y="152" width="1920" height="1040" />
     </state>
-    <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609893418424" />
+    <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1613052840541" />
     <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238929493" />
     <state x="1587" y="592" key="publish.login" timestamp="1606239541587">
       <screen x="0" y="0" width="3440" height="1400" />
