@@ -1,71 +1,76 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+{% include "webcamsave.php" %}
+
+<html>
+
+
+<head>
+</head>
+<body>
+
 <style>
-    #container {
-        margin: 0px auto;
-        width: 500px;
-        height: 375px;
-        border: 10px #333 solid;
-    }
-    #videoElement {
-        width: 500px;
-        height: 375px;
-        background-color: #666;
+    #my_camera{
+        width: 320px;
+        height: 240px;
+        border: 1px solid black;
     }
 </style>
-</head>
 
-<body>
-<div id="container">
-    <video autoplay="true" id="videoElement">
+<div id="my_camera"></div>
 
-    </video>
-</div>
-<script>
-    var video = document.querySelector("#videoElement");
+<input type=button value="Save Snapshot" onClick="saveSnap()">
 
-    if (navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-                video.srcObject = stream;
-            })
-            .catch(function (err0r) {
-                console.log("Something went wrong!");
-            });
+<input type=button value="Take Snapshot" onClick="take_snapshot()">
+
+
+
+<div id="results" ></div>
+
+<!-- Script -->
+<script type="text/javascript" src="{% static 'js/webcam.js' %}"></script>
+
+<!-- Configure a few settings and attach camera -->
+<script language="JavaScript">
+    Webcam.set({
+        width: 320,
+        height: 240,
+        image_format: 'jpeg',
+        jpeg_quality: 90
+    });
+    Webcam.attach( '#my_camera' );
+
+    function take_snapshot() {
+
+        // take snapshot and get image data
+        Webcam.snap( function(data_uri) {
+            // display results in page
+            document.getElementById('results').innerHTML =
+                '<img id="imageprev" src="'+data_uri+'"/>';
+        } );
+
+        Webcam.reset();
     }
+
+    function saveSnap(){
+// Get base64 value from  source
+        var base64image = document.getElementById("imageprev").src;
+
+        Webcam.upload( base64image, 'webcamsave.php', function(code, text) {
+            console.log('Save successfully');
+
+        });
+
+    }
+
 </script>
+
 </body>
 </html>
 
-<head>
-    <title>Capture picture from your webcam</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
-</head>
 
-<body>
-<div id="camera" style="height:auto;width:auto; text-align:left;"></div>
-
-<!--FOR THE SNAPSHOT-->
-<input type="button" value="Take a Snap" id="btPic" onclick="takeSnapShot()" />
-<p id="snapShot"></p>
-</body>
-
-<script>
-    // CAMERA SETTINGS.
-    Webcam.set({
-        width: 220,
-        height: 190,
-        image_format: 'jpeg',
-        jpeg_quality: 100
-    });
-    Webcam.attach('#camera');
-
-    // SHOW THE SNAPSHOT.
-    takeSnapShot = function () {
-        Webcam.snap(function (data_uri) {
-            document.getElementById('snapShot').innerHTML =
-                '<img src="' + data_uri + '" width="70px" height="50px" />';
-        });
-    }
-</script>
 {% endblock %}
+
+
+
