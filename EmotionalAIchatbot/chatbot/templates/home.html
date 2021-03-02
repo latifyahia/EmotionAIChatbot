@@ -1,70 +1,72 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-{% include "webcamsave.php" %}
 
 <html>
 
 
 <head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            width:100vw;
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        /*psoitons is absolute because we need it to go over the webcam*/
+        canvas{
+            position: absolute;
+        }
+    </style>
 </head>
 <body>
 
-<style>
-    #my_camera{
-        width: 320px;
-        height: 240px;
-        border: 1px solid black;
-    }
-</style>
-
-<div id="my_camera"></div>
-
-<input type=button value="Save Snapshot" onClick="saveSnap()">
-
-<input type=button value="Take Snapshot" onClick="take_snapshot()">
-
-
-
-<div id="results" ></div>
-
+<input id="emotion" hidden="true"></body>
+<video id="video" width="720" height="560" autoplay muted></video>
 <!-- Script -->
-<script type="text/javascript" src="{% static 'js/webcam.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
 
-<!-- Configure a few settings and attach camera -->
-<script language="JavaScript">
-    Webcam.set({
-        width: 320,
-        height: 240,
-        image_format: 'jpeg',
-        jpeg_quality: 90
-    });
-    Webcam.attach( '#my_camera' );
+<script>
+    const video = document.getElementById("video")
 
-    function take_snapshot() {
+    Promise.all([
+        faceapi.nets.tinyFaceDetector.loadFromUri('/static/js/models'),
+        faceapi.nets.faceLandmark68Net.loadFromUri('/static/js/models'), //drawing on face
+        faceapi.nets.faceRecognitionNet.loadFromUri('/static/js/models'), //drawing square aorund face
+        faceapi.nets.faceExpressionNet.loadFromUri('/static/js/models'), //emotions dections
+    ]).then(startVideo)
 
-        // take snapshot and get image data
-        Webcam.snap( function(data_uri) {
-            // display results in page
-            document.getElementById('results').innerHTML =
-                '<img id="imageprev" src="'+data_uri+'"/>';
-        } );
-
-        Webcam.reset();
+    function startVideo()
+    {
+        navigator.getUserMedia({video:{}},
+        stream => video.srcObject = stream,
+            err => console.log(err)
+    )
     }
 
-    function saveSnap(){
-// Get base64 value from  source
-        var base64image = document.getElementById("imageprev").src;
+    video.addEventListener('play', () => {
+        const canvas = faceapi.createCanvasFromMedia(video)
+        document.body.append(canvas)
+        const displaySize= {width: video.width, height: video.height}
 
-        Webcam.upload( base64image, 'webcamsave.php', function(code, text) {
-            console.log('Save successfully');
+        setInterval(async() => {
+            const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions()
+            const resizedDetections =faceapi.resizeResults(detections, displaySize)
+            canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)
+            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+            console.log(detections)
+            var json_data = JSON.stringify(detections)
+            console.log(json_data)
+        }, 2000)
 
-        });
+    })
 
-    }
 
 </script>
+
 
 </body>
 </html>

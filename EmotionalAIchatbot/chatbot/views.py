@@ -91,7 +91,6 @@ def home(request):
 def chatbox(request):
         return render(request, "chatbox.html")
 
-def webcamsave(request):
-    return render(request, "home/webcamsave.php")
+
 # Create your views here.
 

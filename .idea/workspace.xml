@@ -31,7 +31,6 @@
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/models.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -211,6 +210,8 @@
       <workItem from="1613556375334" duration="1085000" />
       <workItem from="1613657990467" duration="13000" />
       <workItem from="1614104632284" duration="13316000" />
+      <workItem from="1614264704653" duration="96000" />
+      <workItem from="1614718439599" duration="6436000" />
     </task>
     <servers />
   </component>
@@ -268,11 +269,11 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1554" y="623" key="NewPhpFileDialog/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614109419075" />
-    <state x="1221" y="345" key="SettingsEditor" timestamp="1610293131936">
+    <state x="1221" y="345" key="SettingsEditor" timestamp="1614719017650">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="431" y="344" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609902646038" />
-    <state x="1221" y="345" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1610293131936" />
+    <state x="1221" y="345" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614719017650" />
     <state x="1192" y="240" width="1936" height="1128" key="dock-window-1" timestamp="1610150145686">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -281,11 +282,11 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1560" y="430" key="ftp.server.browser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239524843" />
-    <state x="-1188" y="413" width="1101" height="699" key="new project wizard" timestamp="1613052840541">
-      <screen x="-1920" y="152" width="1920" height="1040" />
+    <state x="1311" y="351" width="1101" height="699" key="new project wizard" timestamp="1614264798799">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1613052840541" />
-    <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606238929493" />
+    <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614264798799" />
     <state x="1587" y="592" key="publish.login" timestamp="1606239541587">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
