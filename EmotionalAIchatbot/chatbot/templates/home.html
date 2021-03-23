@@ -23,8 +23,9 @@
     </style>
 </head>
 <body>
-
-<input id="emotion" hidden="true"></body>
+<input type="text" id="emotions" name="emotions">[
+<input id="emotion" hidden="true">
+</body>
 <video id="video" width="720" height="560" autoplay muted></video>
 <!-- Script -->
 <script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
@@ -59,6 +60,9 @@
             faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
             console.log(detections)
             var json_data = JSON.stringify(detections)
+            var json_obj = JSON.parse(json_data)[0]
+            document.getElementById("emotions").innerHTML = json_obj['expressions'];
+            console.log(json_obj['expressions'])
             console.log(json_data)
         }, 2000)
 

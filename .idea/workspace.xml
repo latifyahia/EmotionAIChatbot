@@ -30,7 +30,6 @@
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/models.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/chatbot/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,17 +89,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="quickstart-script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -211,7 +199,11 @@
       <workItem from="1613657990467" duration="13000" />
       <workItem from="1614104632284" duration="13316000" />
       <workItem from="1614264704653" duration="96000" />
-      <workItem from="1614718439599" duration="6436000" />
+      <workItem from="1614718439599" duration="6647000" />
+      <workItem from="1614725810705" duration="564000" />
+      <workItem from="1614767843697" duration="1502000" />
+      <workItem from="1614868040066" duration="64000" />
+      <workItem from="1616511784304" duration="3312000" />
     </task>
     <servers />
   </component>
@@ -282,11 +274,11 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1560" y="430" key="ftp.server.browser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1606239524843" />
-    <state x="1311" y="351" width="1101" height="699" key="new project wizard" timestamp="1614264798799">
+    <state x="1311" y="351" width="1101" height="699" key="new project wizard" timestamp="1614868054604">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1613052840541" />
-    <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614264798799" />
+    <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614868054604" />
     <state x="1587" y="592" key="publish.login" timestamp="1606239541587">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
