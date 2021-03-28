@@ -22,8 +22,13 @@ intents:
 entities:
 - celebration
 - name
+- emotion
+
 slots:
   name:
+    type: text
+    influence_conversation: true
+  emotion:
     type: text
     influence_conversation: true
   celebration:
@@ -64,6 +69,12 @@ forms:
     name:
     - type: from_entity
       entity: name
+
+  emoiton_form:
+    emotion:
+      - type: from_entity
+        entity: emotion
+
   celebration_form:
     celebration:
     - type: from_entity

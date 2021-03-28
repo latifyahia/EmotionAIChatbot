@@ -23,15 +23,19 @@
     </style>
 </head>
 <body>
-<input type="text" id="emotions" name="emotions">[
-<input id="emotion" hidden="true">
+<form method="POST">
+    <input type="text" id="emotions" name="emotions" hidden="true">
+</form>
 </body>
 <video id="video" width="720" height="560" autoplay muted></video>
 <!-- Script -->
 <script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
 
 <script>
+    var timeoutTime = 1;
+    var emotion;
     const video = document.getElementById("video")
+
 
     Promise.all([
         faceapi.nets.tinyFaceDetector.loadFromUri('/static/js/models'),
@@ -50,21 +54,68 @@
 
     video.addEventListener('play', () => {
         const canvas = faceapi.createCanvasFromMedia(video)
-        document.body.append(canvas)
         const displaySize= {width: video.width, height: video.height}
 
         setInterval(async() => {
+
             const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions()
             const resizedDetections =faceapi.resizeResults(detections, displaySize)
             canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)
             faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
-            console.log(detections)
+
+            //converting dections into json format
             var json_data = JSON.stringify(detections)
+
+            //changing json data to an jobject so i can parse the data
             var json_obj = JSON.parse(json_data)[0]
-            document.getElementById("emotions").innerHTML = json_obj['expressions'];
-            console.log(json_obj['expressions'])
-            console.log(json_data)
-        }, 2000)
+
+            //creating a array with emotions indexed so later i can retrive the type of emotion being displayed
+            var Emotions = {Happy:json_obj.expressions.happy, Neutral:json_obj.expressions.neutral, Sad:json_obj.expressions.sad, Angry:json_obj.expressions.angry,
+                Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }
+
+            //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed
+            if(Emotions["Happy"] > 0.7)
+            {
+                emotion = "Happy";
+            }
+            else if(Emotions["Neutral"] > 0.7)
+            {
+                emotion = "Neutral";
+            }
+            else if(Emotions["Sad"] > 0.7)
+            {
+                emotion = "Sad";
+            }
+            else if(Emotions["Angry"] > 0.7)
+            {
+                emotion = "Angry";
+            }
+            else if(Emotions["Neutral"] > 0.7)
+            {
+                emotion = "Neutral";
+            }
+            else if(Emotions["Fearful"] > 0.7)
+            {
+                emotion = "Fearful";
+            }
+            else if(Emotions["Surprised"] > 0.7)
+            {
+                emotion = "Surprised";
+            }
+
+            else if(Emotions["Disgusted"] > 0.7)
+            {
+                emotion = "Disgusted";
+            }
+            else
+            {
+                emotion = "Error"
+            }
+
+            //setting hidden text input text to the emotion displayed
+            document.getElementById("emotions").innerHTML = emotion;
+
+        }, 5000)
 
     })
 
