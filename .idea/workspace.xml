@@ -23,9 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/ChatBot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ChatBot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/domain.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,8 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -67,9 +72,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.16.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.37" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,14 +85,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tofi\Desktop\ChatBot" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\js" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\img" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\EmotionAIChatbot" />
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="quickstart-script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,7 +221,9 @@
       <workItem from="1616511784304" duration="3645000" />
       <workItem from="1616582554692" duration="884000" />
       <workItem from="1616956118133" duration="5000" />
-      <workItem from="1616958151528" duration="7432000" />
+      <workItem from="1616958151528" duration="8151000" />
+      <workItem from="1617029050975" duration="31000" />
+      <workItem from="1617126130668" duration="11301000" />
     </task>
     <servers />
   </component>

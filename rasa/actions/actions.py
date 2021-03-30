@@ -6,15 +6,18 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
+from urllib import request
+
 from azure.cognitiveservices.vision.face import FaceClient
 from azure.cognitiveservices.vision.face.models import FaceAttributeType
 from msrest.authentication import CognitiveServicesCredentials
 from typing import Any, Text, Dict, List
 import os
+import requests
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
-from EmotionalAIChatbot import EmotionAIChatbot
+
 
 
 class InformationAction(Action):
@@ -65,9 +68,6 @@ class EmotionAction(Action):
         for slot_name in required_slots:
             if tracker.slots.get(slot_name) is None:
                 return[SlotSet("requested_slots"), slot_name]
-
-        def getEmotion(request)
-            emotion = request.POST.get('emotions')
 
 
         return[SlotSet("requested_slot"), None]

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-
 <html>
 
 
@@ -23,16 +22,15 @@
     </style>
 </head>
 <body>
-<form method="POST">
-    <input type="text" id="emotions" name="emotions" hidden="true">
-</form>
 </body>
 <video id="video" width="720" height="560" autoplay muted></video>
 <!-- Script -->
 <script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/emotionData.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
 <script>
-    var timeoutTime = 1;
+
     var emotion;
     const video = document.getElementById("video")
 
@@ -112,8 +110,17 @@
                 emotion = "Error"
             }
 
-            //setting hidden text input text to the emotion displayed
-            document.getElementById("emotions").innerHTML = emotion;
+
+            //sending the emotion to my json server so i can use in rasa
+            axios.put('http://localhost:3000/emotion/1', {
+                currentEmotion: emotion
+            }).then(resp => {
+
+                console.log(resp.data);
+            }).catch(error => {
+
+                console.log(error);
+            });
 
         }, 5000)
 

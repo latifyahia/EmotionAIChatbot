@@ -7,7 +7,7 @@ from io import BytesIO
 import os
 from PIL import Image, ImageDraw
 import requests
-
+from django.http import JsonResponse
 from azure.cognitiveservices.vision.face import FaceClient
 from azure.cognitiveservices.vision.face.models import FaceAttributeType
 from msrest.authentication import CognitiveServicesCredentials
@@ -15,15 +15,13 @@ from msrest.authentication import CognitiveServicesCredentials
 
 # Create your views here.
 def home(request):
-
-    emotion = request.POST.get('emotions')
+    emotion = request.GET.get('emotions')
     print(emotion)
+
     return render(request, "home.html")
 
 
 def chatbox(request):
-        return render(request, "chatbox.html")
-
+    return render(request, "chatbox.html")
 
 # Create your views here.
-

@@ -1,0 +1,9 @@
+{
+  "name": "ChatBot",
+  "version": "1.0.0",
+  "dependencies": {},
+  "main": "index.js",
+  "devDependencies": {
+    "axios": "^0.21.1"
+  }
+}
