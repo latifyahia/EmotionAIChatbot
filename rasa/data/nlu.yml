@@ -92,16 +92,16 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: day_info_celebrations
-  examples: |
-    - [birthday](celebration)
-    - [celebration] {"entity":"celebration","value":"celebration"}
-    - [party] {"entity":"celebration","value":"party"}
-    - [wedding] {"entity":"celebration","value":"wedding"}
-    - [christmas] {"entity":"celebration","value":"christmas"}
-    - [easter] {"entity":"celebration","value":"easter"}
-    - [weekend] {"entity":"celebration","value":"weekend"}
-    - [nightclub] {"entity":"celebration","value":"nightclub"}
-    - [graduation] {"entity":"celebration","value":"graduation"}
-    - [festival] {"entity":"celebration","value":"festival"}
-    - my day has been very good, i went to a party today
+#- intent: day_info_celebrations
+#  examples: |
+#    - [birthday](celebration)
+#    - [celebration] {"entity":"celebration","value":"celebration"}
+#    - [party] {"entity":"celebration","value":"party"}
+#    - [wedding] {"entity":"celebration","value":"wedding"}
+#    - [christmas] {"entity":"celebration","value":"christmas"}
+#    - [easter] {"entity":"celebration","value":"easter"}
+#    - [weekend] {"entity":"celebration","value":"weekend"}
+#    - [nightclub] {"entity":"celebration","value":"nightclub"}
+#    - [graduation] {"entity":"celebration","value":"graduation"}
+#    - [festival] {"entity":"celebration","value":"festival"}
+#    - my day has been very good, i went to a party today

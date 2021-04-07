@@ -1,135 +1,7 @@
 version: "2.0"
 
 stories:
-
-#- story: greet
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#
-#
-#- story: happy
-#  steps:
-#    - intent: mood_happy
-#    - action: utter_happy
-
-#- story: interactive_story_1
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#
-#- story: interactive_story_2
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: my_name
-#    entities:
-#    - name: latif
-#  - slot_was_set:
-#    - name: latif
-#  - action: name_form
-#  - active_loop: name_form
-#  - slot_was_set:
-#    - name: latif
-#  - slot_was_set:
-#    - name: latif
-#  - slot_was_set:
-#    - requested_slot: null
-#  - active_loop: null
-#  - action: action_submit_name
-#  - intent: mood_happy
-#  - action: utter_happy
-
-#- story: introduction name
-#  steps:
-#  - intent: greet
-#  - action: emotion_form
-#  - active_loop: emotion_form
-#  - slot_was_set:
-#      - name: Neutral
-#  - active_loop: null
-#  - action: utter_greet
-#  - intent: my_name
-#    entities:
-#    - name: latif
-#  - action: name_form
-#  - active_loop: name_form
-#  - slot_was_set:
-#    - name: latif
-#  - active_loop: null
-#  - action: action_submit_name
-#  - intent: mood_happy
-#  - action: utter_happy
-
-
-
-
-#
-#- story: greet_name_neutral
-#  steps:
-#  - intent: greet
-#  - action: action_submit_emotion
-#  - slot_was_set:
-#    - emotion: Neutral
-#  - action: utter_greet_neutral
-#  - intent: my_name
-#    entities:
-#    - name: latif
-#  - slot_was_set:
-#    - name: latif
-#  - action: utter_reply_name_neutral
-#
-#- story: greet_name_happy
-#  steps:
-#    - intent: greet
-#    - action: action_submit_emotion
-#    - slot_was_set:
-#        - emotion: Happy
-#    - action: utter_greet_happy
-#    - intent: my_name
-#      entities:
-#        - name: latif
-#    - slot_was_set:
-#        - name: latif
-#    - action: utter_reply_name_happy
-#
-#
-#- story: greet_name_sad
-#  steps:
-#    - intent: greet
-#    - action: action_submit_emotion
-#    - slot_was_set:
-#        - emotion: Sad
-#    - action: utter_greet_sad
-#    - intent: my_name
-#      entities:
-#        - name: latif
-#    - slot_was_set:
-#        - name: latif
-#    - action: utter_reply_name_sad
-#
-#- story: interactive_story_1
-#  steps:
-#  - intent: greet
-#  - action: action_submit_emotion
-#  - slot_was_set:
-#    - emotion: Happy
-#  - action: utter_greet_happy
-#  - intent: my_name
-#    entities:
-#    - name: latif
-#  - slot_was_set:
-#    - name: latif
-#  - action: utter_reply_name_happy
-#
-#- story: interactive_story_1
-#  steps:
-#  - intent: greet
-#  - action: action_submit_emotion
-#  - slot_was_set:
-#    - emotion: Happy
-
-- story: interactive_story_2
+- story: greet_name_happy
   steps:
   - intent: greet
   - action: action_submit_emotion
@@ -142,9 +14,8 @@ stories:
   - slot_was_set:
     - name: latif
   - action: utter_reply_name_happy
-  - action: action_submit_emotion_reset
 
-- story: interactive_story_1
+- story: greet_name_neutral
   steps:
   - intent: greet
   - action: action_submit_emotion
@@ -157,9 +28,8 @@ stories:
   - slot_was_set:
     - name: latif
   - action: utter_reply_name_neutral
-  - action: action_submit_emotion_reset
 
-- story: interactive_story_3
+- story: greet_name_sad
   steps:
   - intent: greet
   - action: action_submit_emotion
@@ -172,6 +42,5 @@ stories:
   - slot_was_set:
     - name: latif
   - action: utter_reply_name_sad
-  - action: action_submit_emotion_reset
 
 

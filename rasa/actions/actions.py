@@ -86,15 +86,3 @@ class ActionEmotionSubmit(Action):
             emotion = jsonData[0]['currentEmotion']
             return [SlotSet("emotion", emotion)]
 
-
-class ActionEmotionSubmitReset(Action):
-
-
-    def name(self) -> Text:
-        return "action_submit_emotion_reset"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        return [SlotSet("emotion", "null")]

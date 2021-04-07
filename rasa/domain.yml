@@ -11,20 +11,20 @@ intents:
 - deny
 - mood_unhappy
 - bot_challenge
-- day_info_celebrations
+
 entities:
-- emotion
 - name
 slots:
   name:
     type: text
     influence_conversation: true
   emotion:
-    type: text
+    type: categorical
+    values:
+      - Happy
+      - Sad
+      - Neutral
     influence_conversation: true
-  requested_slot:
-    type: text
-    influence_conversation: false
 responses:
   utter_greet_neutral:
   - text: Hey there! May i have your name?
