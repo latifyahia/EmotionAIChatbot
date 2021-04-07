@@ -3,27 +3,18 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- mood_happy
+- my_name
 - greet
-- my_name:
-    use_entities:
-    - name
-- day_info_celebrations:
-    use_entities:
-    - celebration
-- goodbye
+- mood_happy
 - affirm
+- goodbye
 - deny
 - mood_unhappy
 - bot_challenge
-- celebrations:
-    use_entities:
-    - celebration
+- day_info_celebrations
 entities:
-- celebration
-- name
 - emotion
-
+- name
 slots:
   name:
     type: text
@@ -31,17 +22,22 @@ slots:
   emotion:
     type: text
     influence_conversation: true
-  celebration:
-    type: text
-    influence_conversation: true
   requested_slot:
     type: text
     influence_conversation: false
 responses:
-  utter_greet:
+  utter_greet_neutral:
   - text: Hey there! May i have your name?
-  utter_ask_name:
+  utter_greet_happy:
+  - text: Hey there smiley! that smile looks great on you. May i have your name?
+  utter_greet_sad:
+  - text: Hey, cheer up there! i bet a smile would lookg good on you. May i have your name please?
+  utter_reply_name_neutral:
   - text: Thank you {name}, i'm Lolly your emotional AI chatbot. How are you today?
+  utter_reply_name_happy:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. No need to ask how you are doing i can tell your happy today!
+  utter_reply_name_sad:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that your sad.
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -58,24 +54,18 @@ responses:
   utter_day_response_happy:
   - text: Thats great to hear, It seems like you had fun at the {celebration}
 actions:
-- action_submit_good_day
+- action_submit_emotion
 - action_submit_name
-- utter_ask_name
-- utter_day_response_happy
-- utter_greet
-- utter_happy
+- utter_greet_happy
+- utter_greet_neutral
+- utter_greet_sad
+- utter_reply_name_happy
+- utter_reply_name_neutral
+- utter_reply_name_sad
+- action_submit_emotion_reset
 forms:
   name_form:
     name:
     - type: from_entity
       entity: name
 
-  emoiton_form:
-    emotion:
-      - type: from_entity
-        entity: emotion
-
-  celebration_form:
-    celebration:
-    - type: from_entity
-      entity: celebration

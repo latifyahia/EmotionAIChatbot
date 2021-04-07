@@ -1,7 +1,8 @@
+import urllib
+import urllib, json
 import urllib3
 import os
 import requests
-import json
 from django.shortcuts import render
 from io import BytesIO
 import os
@@ -15,8 +16,11 @@ from msrest.authentication import CognitiveServicesCredentials
 
 # Create your views here.
 def home(request):
-    emotion = request.GET.get('emotions')
-    print(emotion)
+
+    r = requests.get('http://localhost:3000/emotion')
+    jsonData = r.json()
+    emotion = jsonData[0]['currentEmotion']
+
 
     return render(request, "home.html")
 

@@ -17,7 +17,7 @@ import requests
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
-
+import urllib, json
 
 
 class InformationAction(Action):
@@ -47,28 +47,54 @@ class ActionSubmit(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(template="utter_ask_name", Name=tracker.get_slot("name"))
 
         return []
 
+# class EmotionAction(Action):
+#
+#     def name(self) -> Text:
+#         return "emotion_form"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         required_slots = ["emotion"]
+#
+#         for slot_name in required_slots:
+#             if tracker.slots.get(slot_name) is None:
+#                 return[SlotSet("requested_slots"), slot_name]
+#
+#         return[SlotSet("requested_slot"), None]
 
-class EmotionAction(Action):
+
+
+
+
+class ActionEmotionSubmit(Action):
+
 
     def name(self) -> Text:
-        return "emotion_form"
-
-
+        return "action_submit_emotion"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        required_slots = ["emotion"]
+            r = requests.get('http://localhost:3000/emotion')
+            jsonData = r.json()
+            emotion = jsonData[0]['currentEmotion']
+            return [SlotSet("emotion", emotion)]
 
-        for slot_name in required_slots:
-            if tracker.slots.get(slot_name) is None:
-                return[SlotSet("requested_slots"), slot_name]
+
+class ActionEmotionSubmitReset(Action):
 
 
-        return[SlotSet("requested_slot"), None]
+    def name(self) -> Text:
+        return "action_submit_emotion_reset"
 
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return [SlotSet("emotion", "null")]

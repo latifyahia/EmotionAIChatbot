@@ -24,7 +24,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotionJson.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotionData.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/nlu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/rules.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/stories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/domain.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/story_graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/story_graph.dot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,15 +96,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,7 +227,9 @@
       <workItem from="1616958151528" duration="8151000" />
       <workItem from="1617029050975" duration="31000" />
       <workItem from="1617126130668" duration="11421000" />
-      <workItem from="1617139977331" duration="333000" />
+      <workItem from="1617139977331" duration="529000" />
+      <workItem from="1617308888350" duration="8000" />
+      <workItem from="1617754316666" duration="15611000" />
     </task>
     <servers />
   </component>
