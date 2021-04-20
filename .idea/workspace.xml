@@ -24,12 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/nlu.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/stories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/domain.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/story_graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/story_graph.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotionData.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +89,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="quickstart-script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,7 +223,12 @@
       <workItem from="1617139977331" duration="529000" />
       <workItem from="1617308888350" duration="8000" />
       <workItem from="1617754316666" duration="16406000" />
-      <workItem from="1617811126823" duration="1983000" />
+      <workItem from="1617811126823" duration="2148000" />
+      <workItem from="1617898032086" duration="5000" />
+      <workItem from="1618393968722" duration="1401000" />
+      <workItem from="1618778599404" duration="19000" />
+      <workItem from="1618778732048" duration="420000" />
+      <workItem from="1618925131648" duration="5537000" />
     </task>
     <servers />
   </component>
@@ -237,47 +248,42 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1250" y="340" key="#Project_Structure" timestamp="1609889713385">
-      <screen x="-1920" y="152" width="1920" height="1040" />
-    </state>
-    <state x="-1250" y="340" key="#Project_Structure/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609889713385" />
     <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614105034131">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614105034131" />
-    <state x="-1083" y="490" key="FileChooserDialogImpl" timestamp="1609893538770">
-      <screen x="-1920" y="152" width="1920" height="1040" />
+    <state x="1500" y="454" key="FileChooserDialogImpl" timestamp="1618778777381">
+      <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="-1083" y="490" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609893538770" />
+    <state x="1500" y="454" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618778777381" />
     <state width="3397" height="400" key="GridCell.Tab.0.bottom" timestamp="1617138865089">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609904520398" />
     <state width="3397" height="400" key="GridCell.Tab.0.bottom/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1617138865089" />
     <state width="3397" height="400" key="GridCell.Tab.0.center" timestamp="1617138865089">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609904520398" />
     <state width="3397" height="400" key="GridCell.Tab.0.center/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1617138865089" />
     <state width="3397" height="400" key="GridCell.Tab.0.left" timestamp="1617138865089">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609904520398" />
     <state width="3397" height="400" key="GridCell.Tab.0.left/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1617138865089" />
     <state width="3397" height="400" key="GridCell.Tab.0.right" timestamp="1617138865089">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609904520398" />
     <state width="3397" height="400" key="GridCell.Tab.0.right/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1617138865089" />
     <state x="1554" y="623" key="NewPhpFileDialog" timestamp="1614109419075">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1554" y="623" key="NewPhpFileDialog/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614109419075" />
-    <state x="1221" y="345" key="SettingsEditor" timestamp="1614719017650">
+    <state x="247" y="429" key="SettingsEditor" timestamp="1618779084377">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="431" y="344" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1609902646038" />
-    <state x="1221" y="345" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614719017650" />
+    <state x="247" y="429" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618779084377" />
+    <state x="1157" y="384" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618779072038">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1157" y="384" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618779072038" />
     <state x="1192" y="240" width="1936" height="1128" key="dock-window-1" timestamp="1610150145686">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -287,6 +293,10 @@
     </state>
     <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1613052840541" />
     <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614868054604" />
+    <state x="1383" y="315" key="search.everywhere.popup" timestamp="1618779100269">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1383" y="315" key="search.everywhere.popup/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618779100269" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
