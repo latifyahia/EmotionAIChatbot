@@ -1,29 +1,16 @@
 {% extends "base.html" %}
-{% block content %}
 {% load static %}
-<html>
-
-
+{% block content %}
 <head>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            width:100vw;
-            height: 100vh;
-            display: flex;
-            justify-content:center;
-            align-items: center;
-        }
-        /*positons is absolute because we need it to go over the webcam*/
-        canvas{
-            position: absolute;
-        }
-    </style>
+
 </head>
-<body>
-</body>
-<video id="video" width="720" height="560" autoplay muted></video>
+
+
+<div class="container-lg">
+    <video style="margin-top: 30px; display: flex; border:5px solid #1a237e; border-width: 10px" id="video" width="380" height="290" autoplay muted></video>
+</div>
+
+
 <!-- Script -->
 <script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/emotionData.js' %}"></script>
@@ -31,6 +18,10 @@
 
 <script>
 
+    // var vid = document.getElementById('video')
+    // document.addEventListener('load', function () {
+    //     video.setAttribute(visibility, visible);
+    // })
     var emotion;
     const video = document.getElementById("video")
 
@@ -128,11 +119,6 @@
 
 
 </script>
-
-
-</body>
-</html>
-
 
 {% endblock %}
 

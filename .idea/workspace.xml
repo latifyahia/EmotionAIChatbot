@@ -38,9 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="package.json" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -81,21 +81,23 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\register\templates" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\templates\registration" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\js" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\img" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot" />
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,7 +230,8 @@
       <workItem from="1618393968722" duration="1401000" />
       <workItem from="1618778599404" duration="19000" />
       <workItem from="1618778732048" duration="420000" />
-      <workItem from="1618925131648" duration="5537000" />
+      <workItem from="1618925131648" duration="5620000" />
+      <workItem from="1618948327188" duration="14103000" />
     </task>
     <servers />
   </component>
@@ -276,18 +279,14 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1554" y="623" key="NewPhpFileDialog/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614109419075" />
-    <state x="247" y="429" key="SettingsEditor" timestamp="1618779084377">
+    <state x="247" y="429" key="SettingsEditor" timestamp="1618949248083">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="247" y="429" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618779084377" />
+    <state x="247" y="429" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618949248083" />
     <state x="1157" y="384" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618779072038">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1157" y="384" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618779072038" />
-    <state x="1192" y="240" width="1936" height="1128" key="dock-window-1" timestamp="1610150145686">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1192" y="240" width="1936" height="1128" key="dock-window-1/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1610150145686" />
     <state x="1311" y="351" width="1101" height="699" key="new project wizard" timestamp="1614868054604">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
