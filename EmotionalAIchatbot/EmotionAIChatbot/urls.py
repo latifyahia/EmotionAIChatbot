@@ -24,6 +24,8 @@ urlpatterns = [
     path('home/', home),
     path('chatbox/', chatbox),
     path('about/', about),
+    path('profile/', profile),
+    path('updateEmotions/', updateEmotions),
     path('register/', v.register, name='register'),
     path('', include('django.contrib.auth.urls')),
 

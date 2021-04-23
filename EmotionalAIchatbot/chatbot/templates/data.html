@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if user.is_authenticated %}
+<style>
+    .btn-primary.active, .btn-primary:active {
+        background-color: #1a237e;
+        border-color: #1a237e;
+    }
+    .btn-primary {
+        background-color: white;
+        border-color: white;
+        color: black
+
+    }
+    .visible {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 2s linear;
+    }
+    .hidden {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 2s, opacity 2s linear;
+    }
+</style>
+<div class="row-sm-2">
+    <br>
+</div>
+<div class="row-sm-2">
+    <br>
+</div>
+
+<div class="container-fluid">
+    <div class="row h-10">
+        <div class="col-sm-3 ">
+            <canvas id="pieChart" width="400" height="400"></canvas>
+            <input id="happy" hidden="true" value={{userEmotions.happy}}>
+            <input id="sad" hidden="true" value={{userEmotions.sad}}>
+            <input id="angry" hidden="true" value={{userEmotions.angry}}>
+            <input id="neutral" hidden="true" value={{userEmotions.neutral}}>
+            <input id="fearful" hidden="true" value={{userEmotions.fearful}}>
+            <input id="surprised" hidden="true" value={{userEmotions.surprised}}>
+            <input id="disgusted" hidden="true" value={{userEmotions.disgusted}}>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <canvas id="polarAreaChart" width="400" height="400"></canvas>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <canvas id="barChart" width="400" height="400"></canvas>
+        </div>
+    </div>
+    <div class="row h-25">
+        <br>
+    </div>
+    <div class="row h-25">
+        <div class="col-sm-3 center-align">
+            <button id="pieButton" class="btn btn-primary active" data-bs-toggle="button" type="button">Pie Chart</button>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 center-align">
+            <button id="polarButton" class="btn btn-primary" data-bs-toggle="button" type="button">Polar Chart</button>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3 center-align">
+            <button id="barButton" class="btn btn-primary" data-bs-toggle="button" type="button">Bar Chart</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    var happy = document.getElementById('happy').value;
+    var sad = document.getElementById('sad').value;
+    var angry = document.getElementById('angry').value;
+    var neutral = document.getElementById('neutral').value;
+    var fearful = document.getElementById('fearful').value;
+    var surprised = document.getElementById('surprised').value;
+    var disgusted = document.getElementById('disgusted').value;
+    var sum = parseInt(happy) + parseInt(sad)  + parseInt(angry) + parseInt(neutral) + parseInt(fearful)
+            + parseInt(surprised) + parseInt(disgusted);
+    var pieClick = 3;
+    var polarClick = 2;
+    var barClick = 2;
+
+    document.getElementById('pieButton').onclick = function()
+    {
+        if ( pieClick % 2 == 0)
+        {
+            $("#pieChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},750);
+        }
+        else
+        {
+            $("#pieChart").animate({opacity: 0.0}, 750, function(){
+                $("#pieChart").css("visibility","hidden");
+            });
+        }
+        pieClick++;
+    }
+
+    document.getElementById('polarButton').onclick = function()
+    {
+        if ( polarClick % 2 == 0)
+        {
+            $("#polarAreaChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},750);
+        }
+        else
+        {
+            $("#polarAreaChart").animate({opacity: 0.0}, 750, function(){
+                $("#polarAreaChart").css("visibility","hidden");
+            });
+        }
+
+        polarClick++;
+    }
+
+    document.getElementById('barButton').onclick = function()
+    {
+        if ( barClick % 2 == 0)
+        {
+            $("#barChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},750);
+        }
+        else
+        {
+            $("#barChart").animate({opacity: 0.0}, 750, function(){
+                $("#barChart").css("visibility","hidden");
+            });
+        }
+
+        barClick++;
+    }
+
+
+    var pieChart = document.getElementById('pieChart').getContext('2d');
+    $("#pieChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},1500);
+    var pie = new Chart(pieChart, {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'Happy',
+                'Sad',
+                'Angry',
+                'Surprised',
+                'Neutral',
+                'Fearful',
+                'Disgusted'
+            ],
+            datasets: [{
+                data: [Math.round((happy/sum)*100), Math.round((sad/sum)*100), Math.round((angry/sum)*100),
+                    Math.round((surprised/sum)*100),Math.round((neutral/sum)*100),Math.round((fearful/sum)*100)
+                    ,Math.round((disgusted/sum)*100)],
+                backgroundColor: [
+                    'rgb(33, 200, 180)',
+                    'rgb(54, 162, 235)',
+                    'rgb(35, 43, 86)',
+                    'rgb(255, 234, 132)',
+                    'rgb(170, 77, 235)',
+                    'rgb(255, 6, 86)',
+                    'rgb(4, 253, 6)'
+                ],
+                hoverOffset: 4
+            }]
+        }
+    });
+
+    var polarAreaChart = document.getElementById('polarAreaChart').getContext('2d');
+    document.getElementById("polarAreaChart").style.visibility = "hidden";
+    var polarArea = new Chart(polarAreaChart, {
+        type: 'polarArea',
+        data: {
+            labels: [
+                'Happy',
+                'Sad',
+                'Angry',
+                'Surprised',
+                'Neutral',
+                'Fearful',
+                'Disgusted'
+            ],
+            datasets: [{
+                labels: [
+                    'Happy',
+                    'Sad',
+                    'Angry',
+                    'Surprised',
+                    'Neutral',
+                    'Fearful',
+                    'Disgusted'],
+                data: [Math.round((happy/sum)*100), Math.round((sad/sum)*100), Math.round((angry/sum)*100),
+                    Math.round((surprised/sum)*100),Math.round((neutral/sum)*100),Math.round((fearful/sum)*100)
+                    ,Math.round((disgusted/sum)*100)],
+                backgroundColor: [
+                    'rgb(33, 200, 180)',
+                    'rgb(0, 0, 255)',
+                    'rgb(35, 43, 86)',
+                    'rgb(255, 115, 27)',
+                    'rgb(170, 77, 235)',
+                    'rgb(255, 0, 0)',
+                    'rgb(0, 255, 0)'
+                ],
+                hoverOffset: 4
+            }],
+        }
+    });
+    var barChart = document.getElementById('barChart').getContext('2d');
+    document.getElementById("barChart").style.visibility = "hidden";
+    var chart = new Chart(barChart, {
+        type: 'bar',
+        data: {
+            labels: [
+                'Happy',
+                'Sad',
+                'Angry',
+                'Surprised',
+                'Neutral',
+                'Fearful',
+                'Disgusted'
+            ],
+            datasets: [{
+                label: 'Emotions Displayed in %',
+                data: [Math.round((happy/sum)*100), Math.round((sad/sum)*100), Math.round((angry/sum)*100),
+                    Math.round((surprised/sum)*100),Math.round((neutral/sum)*100),Math.round((fearful/sum)*100)
+                    ,Math.round((disgusted/sum)*100)],
+                backgroundColor: [
+                    'rgb(33, 200, 180,0.5)',
+                    'rgb(0, 0, 255,0.5)',
+                    'rgb(35, 43, 86,0.5)',
+                    'rgb(255, 115, 27,0.5)',
+                    'rgb(170, 77, 235,0.5)',
+                    'rgb(255, 0, 0,0.5)',
+                    'rgb(0, 255, 0,0.5)'
+                ],
+                borderColor: [
+                    'rgb(33, 200, 180,1)',
+                    'rgb(0, 0, 255,1)',
+                    'rgb(35, 43, 86,1)',
+                    'rgb(255, 115, 27,1)',
+                    'rgb(170, 77, 235,1)',
+                    'rgb(255, 0, 0,1)',
+                    'rgb(0, 255, 0,1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    max: 100,
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+</script>
+
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4">
+            <div class="center">
+                <h3>Login</h3>
+                <p>Don't have an account? Create one <a href="/register">Here</a></p>
+                <a type="submit" class="btn btn-success" href="/login">Go To Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

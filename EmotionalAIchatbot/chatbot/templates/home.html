@@ -63,42 +63,42 @@
                 Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }
 
             //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed
-            if(Emotions["Happy"] > 0.7)
+            if(Emotions["Happy"] > 0.5)
             {
                 emotion = "Happy";
             }
-            else if(Emotions["Neutral"] > 0.7)
+            else if(Emotions["Neutral"] > 0.5)
             {
                 emotion = "Neutral";
             }
-            else if(Emotions["Sad"] > 0.7)
+            else if(Emotions["Sad"] > 0.5)
             {
                 emotion = "Sad";
             }
-            else if(Emotions["Angry"] > 0.7)
+            else if(Emotions["Angry"] > 0.5)
             {
                 emotion = "Angry";
             }
-            else if(Emotions["Neutral"] > 0.7)
+            else if(Emotions["Neutral"] > 0.5)
             {
                 emotion = "Neutral";
             }
-            else if(Emotions["Fearful"] > 0.7)
+            else if(Emotions["Fearful"] > 0.5)
             {
                 emotion = "Fearful";
             }
-            else if(Emotions["Surprised"] > 0.7)
+            else if(Emotions["Surprised"] > 0.5)
             {
                 emotion = "Surprised";
             }
 
-            else if(Emotions["Disgusted"] > 0.7)
+            else if(Emotions["Disgusted"] > 0.5)
             {
                 emotion = "Disgusted";
             }
             else
             {
-                emotion = "Error"
+                emotion = "Neutral"
             }
 
 
@@ -111,6 +111,21 @@
             }).catch(error => {
 
                 console.log(error);
+            });
+
+            //sending the emotion to my views.py so i can save the emotions with the current logged in user
+            $.ajax({
+                type: "POST",
+                url: "/updateEmotions/",
+                data:{
+                    emotion: emotion,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                datatype:'json',
+                success: function(data) {
+                    if (data['success'])
+                        console.log("successfully added to user emotions")
+                }
             });
 
         }, 5000)

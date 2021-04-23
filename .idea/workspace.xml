@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emotionData.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,15 +90,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -231,7 +230,9 @@
       <workItem from="1618778599404" duration="19000" />
       <workItem from="1618778732048" duration="420000" />
       <workItem from="1618925131648" duration="5620000" />
-      <workItem from="1618948327188" duration="14103000" />
+      <workItem from="1618948327188" duration="14347000" />
+      <workItem from="1618996875463" duration="2075000" />
+      <workItem from="1619114211066" duration="27632000" />
     </task>
     <servers />
   </component>
@@ -292,10 +293,10 @@
     </state>
     <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1613052840541" />
     <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614868054604" />
-    <state x="1383" y="315" key="search.everywhere.popup" timestamp="1618779100269">
+    <state x="1383" y="315" key="search.everywhere.popup" timestamp="1619121069432">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1383" y="315" key="search.everywhere.popup/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618779100269" />
+    <state x="1383" y="315" key="search.everywhere.popup/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619121069432" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

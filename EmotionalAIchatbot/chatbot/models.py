@@ -10,3 +10,6 @@ class UserData(models.Model):
             return self.emotion
 
 
+
+
+
