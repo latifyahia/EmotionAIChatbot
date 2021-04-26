@@ -21,7 +21,7 @@ body {
 
 .chat_header {
     height: 60px;
-    background: rgb(90, 23, 238);
+    background: #6a34e2;
     border-radius: 10px 10px 0px 0px;
     padding: 5px;
     font-size: 20px;
@@ -31,7 +31,7 @@ body {
     color: white;
     float: left;
     margin-top: 3%;
-    margin-left: 35%;
+    margin-left: 9%;
 }
 
 .chats {
@@ -163,8 +163,9 @@ textarea-webkit-scrollbar {
 
 .imgProfile {
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.16), 0 0px 10px 0 #00000096;
-    border-radius: 50px;
+    border-radius: 50%;
     width: 60%;
+    margin-bottom: 20px;
 }
 
 .profile_div {
@@ -196,7 +197,7 @@ textarea-webkit-scrollbar {
 
 .dropdown-content li>a,
 .dropdown-content li>span {
-    color: #5a17ee;
+    color: #6a34e2;
 }
 
 @keyframes animateElement {

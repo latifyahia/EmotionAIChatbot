@@ -1,20 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<div class="container">
+<style>
+    .tap-target-wrapper {
+        width: 1050px;
+        height: 1050px;
+        position: absolute;
+        z-index: 1000;
+        visibility: hidden;
+        -webkit-transition: visibility 0s .3s;
+        transition: visibility 0s .3s;
+    }
+    .tap-target-wave {
+        position: fixed;
+        border-radius: 20%;
+        z-index: 10001;
+    }
+</style>
+<div class="container-fluid">
 
-    <!-- Modal for rendering the charts, declare this if you want to render charts,
-     else you remove the modal -->
-    <div id="modal1" class="modal">
-        <canvas id="modal-chart"></canvas>
-    </div>
+
 
     <!--chatbot widget -->
     <div class="widget">
         <div class="chat_header">
 
             <!--Add the name of the bot here -->
-            <span class="chat_header_title">Sara</span>
+            <span class="chat_header_title">Lolly</span>
             <span class="dropdown-trigger" href='#' data-target='dropdown1'>
                   <i class="material-icons">
                   more_vert
@@ -44,16 +56,17 @@
 
     <!--bot profile-->
     <div class="profile_div" id="profile_div">
-        <img class="imgProfile" src="{% static 'img/botAvatar.png' %}"/>
-    </div>
-
-    <!-- Bot pop-up intro -->
-    <div class="tap-target" data-target="profile_div">
-        <div class="tap-target-content">
-            <h5 class="white-text">Hey there 👋</h5>
-            <p class="white-text">I can help you get started with Rasa and answer your technical questions.</p>
+        <img class="imgProfile" src="{% static 'img/lolly_avatar.png' %}"/>
+        <!-- Bot pop-up intro -->
+        <div style="background-color: #6a34e2;" class="tap-target"  data-target="profile_div" >
+            <div class="tap-target-content" >
+                <h5>Hey there 👋</h5>
+                <p>Feel free to pop me a message when you're ready!</p>
+            </div>
         </div>
     </div>
+
+
 
 </div>
 

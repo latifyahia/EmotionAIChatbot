@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var elemsTap = document.querySelector('.tap-target');
     var instancesTap = M.TapTarget.init(elemsTap, {});
     instancesTap.open();
-    setTimeout(function() { instancesTap.close(); }, 4000);
+    setTimeout(function() { instancesTap.close(); }, 5500);
 
 });
 
@@ -135,7 +135,7 @@ $("#sendButton").on("click", function(e) {
 
 //==================================== Set user response =====================================
 function setUserResponse(message) {
-    var UserResponse = '<img class="userAvatar" src=' + "./static/img/userAvatar.jpg" + '><p class="userMsg">' + message + ' </p><div class="clearfix"></div>';
+    var UserResponse = '<img class="userAvatar" src=' + "/static/img/userAvatar.jpg" + '><p class="userMsg">' + message + ' </p><div class="clearfix"></div>';
     $(UserResponse).appendTo(".chats").show("slow");
 
     $(".usrInput").val("");
@@ -200,7 +200,7 @@ function setBotResponse(response) {
             //if there is no response from Rasa, send  fallback message to the user
             var fallbackMsg = "I am facing some issues, please try again later!!!";
 
-            var BotResponse = '<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">' + fallbackMsg + '</p><div class="clearfix"></div>';
+            var BotResponse = '<img class="botAvatar" src="/static/img/lolly_avatar.png"/><p class="botMsg">' + fallbackMsg + '</p><div class="clearfix"></div>';
 
             $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
             scrollToBottomOfResults();
@@ -211,7 +211,7 @@ function setBotResponse(response) {
 
                 //check if the response contains "text"
                 if (response[i].hasOwnProperty("text")) {
-                    var BotResponse = '<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">' + response[i].text + '</p><div class="clearfix"></div>';
+                    var BotResponse = '<img class="botAvatar" src="/static/img/lolly_avatar.png"/><p class="botMsg">' + response[i].text + '</p><div class="clearfix"></div>';
                     $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
                 }
 
@@ -222,12 +222,12 @@ function setBotResponse(response) {
                 }
 
 
-                //check if the response contains "buttons" 
+                //check if the response contains "buttons"
                 if (response[i].hasOwnProperty("buttons")) {
                     addSuggestion(response[i].buttons);
                 }
 
-                //check if the response contains "attachment" 
+                //check if the response contains "attachment"
                 if (response[i].hasOwnProperty("attachment")) {
 
                     //check if the attachment type is "video"
@@ -239,7 +239,7 @@ function setBotResponse(response) {
                     }
 
                 }
-                //check if the response contains "custom" message  
+                //check if the response contains "custom" message
                 if (response[i].hasOwnProperty("custom")) {
 
                     //check if the custom payload type is "quickReplies"
@@ -284,7 +284,7 @@ function setBotResponse(response) {
                         // sample format of the charts data:
                         // var chartData = { "title": "Leaves", "labels": ["Sick Leave", "Casual Leave", "Earned Leave", "Flexi Leave"], "backgroundColor": ["#36a2eb", "#ffcd56", "#ff6384", "#009688", "#c45850"], "chartsData": [5, 10, 22, 3], "chartType": "pie", "displayLegend": "true" }
 
-                        //store the below parameters as global variable, 
+                        //store the below parameters as global variable,
                         // so that it can be used while displaying the charts in modal.
                         chartData = (response[i].custom.data)
                         title = chartData.title;
@@ -541,7 +541,7 @@ function getUserPosition(position) {
     response = "Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude;
     console.log("location: ", response);
 
-    //here you add the intent which you want to trigger 
+    //here you add the intent which you want to trigger
     response = '/inform{"latitude":' + position.coords.latitude + ',"longitude":' + position.coords.longitude + '}';
     $("#userInput").prop('disabled', false);
     send(response);
@@ -577,7 +577,7 @@ function handleLocationAccessError(error) {
 //======================================bot typing animation ======================================
 function showBotTyping() {
 
-    var botTyping = '<img class="botAvatar" id="botAvatar" src="./static/img/sara_avatar.png"/><div class="botTyping">' + '<div class="bounce1"></div>' + '<div class="bounce2"></div>' + '<div class="bounce3"></div>' + '</div>'
+    var botTyping = '<img class="botAvatar" id="botAvatar" src="/static/img/lolly_avatar.png"/><div class="botTyping">' + '<div class="bounce1"></div>' + '<div class="bounce2"></div>' + '<div class="bounce3"></div>' + '</div>'
     $(botTyping).appendTo(".chats");
     $('.botTyping').show();
     scrollToBottomOfResults();

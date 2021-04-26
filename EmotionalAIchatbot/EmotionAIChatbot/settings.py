@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'chatbot',
     'register',
+
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_URL = '/img/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'chatbot/static')
 ]

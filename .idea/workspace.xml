@@ -24,8 +24,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/register/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/register/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/materialize.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/chatbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/chatbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +243,9 @@
       <workItem from="1618925131648" duration="5620000" />
       <workItem from="1618948327188" duration="14347000" />
       <workItem from="1618996875463" duration="2075000" />
-      <workItem from="1619114211066" duration="27632000" />
+      <workItem from="1619114211066" duration="27920000" />
+      <workItem from="1619146048702" duration="280000" />
+      <workItem from="1619450158379" duration="14483000" />
     </task>
     <servers />
   </component>

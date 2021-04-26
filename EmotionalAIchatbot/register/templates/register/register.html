@@ -1,7 +1,30 @@
 {% extends "chatbot/templates/base.html" %}
 {% load crispy_forms_tags %}
 {% block content%}
-
+<style>
+    input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+        border-bottom: 2px solid #6a34e2;
+        border-radius: 0;
+        outline: none;
+        height: 3rem;
+        width: 100%;
+        font-size: 16px;
+        margin: 0 0 8px 0;
+        padding: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-transition: border .3s, -webkit-box-shadow .3s;
+        transition: border .3s, -webkit-box-shadow .3s;
+        transition: box-shadow .3s, border .3s;
+        transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+    }
+    label {
+        font-size: 1rem;
+        color: #6a34e2;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class="col-4">
@@ -12,7 +35,8 @@
                 <form method="POST" class="form-group">
                     {% csrf_token %}
                     {{form | crispy}}
-                    <button type="submit" class="btn btn-success">Register</button>
+
+                    <button style="background-color: #6a34e2; border-color: #6a34e2;" type="submit" class="btn btn-success">Register</button>
                 </form>
             </div>.
         </div>
