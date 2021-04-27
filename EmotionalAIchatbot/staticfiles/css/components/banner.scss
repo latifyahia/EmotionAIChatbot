@@ -1,0 +1,146 @@
+@import "../variables.scss";
+
+.banner {
+  height: 80vh;
+  position: relative;
+  @media (max-width: $widescreen) {
+    height: 90vh;
+  }
+  .banner-addition-bg {
+    background: #dacfff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .banner-bg {
+    background: #dacfff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+  }
+  .banner-inner {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    @media (max-width: $widescreen) {
+      height: 90vh;
+    }
+    .content-outer {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .content-inner {
+        h1 {
+          font-family: "Playfair Display";
+          color: black;
+          font-size: 3.4rem;
+          line-height: 4.8rem;
+          margin: 34px -50px -100px;
+          width: 920px;
+          left: 90px;
+          @media (max-width: $widescreen) {
+            font-size: 3.1rem;
+            line-height: 3.6rem;
+          }
+          .line {
+            overflow: hidden;
+            height: 70px;
+            position: relative;
+            span {
+              position: absolute;
+            }
+          }
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.6rem;
+          font-weight: 300;
+          color: black;
+          width: 520px;
+          margin: 180px -50px 80px;
+          @media (max-width: $widescreen) {
+            margin: 16px 0 60px;
+          }
+        }
+        .btn-row {
+          a {
+            display: inline-block;
+            height: 56px;
+            line-height: 56px;
+            font-size: 1rem;
+            padding: 0 32px;
+            margin: 0 -50px 0;
+            text-decoration: none;
+            font-weight: 600;
+            color: black;
+            background: #6a34e2;
+            border-radius: 100px;
+          }
+        }
+      }
+    }
+    .image {
+      position: relative;
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      .image-inner {
+        img {
+          width: 450px;
+          position: absolute;
+          bottom: 15vh;
+          transform: rotate(25deg);
+          left: 200px;
+          right: -150px;
+          z-index: 9;
+          @media (max-width: $widescreen) {
+            width: 400px;
+          }
+        }
+        .feature-banner {
+          position: absolute;
+          bottom: 500px;
+          left: 140px;
+          background: #a287ff;
+          color: black;
+          height: 52px;
+          display: flex;
+          align-items: center;
+          padding: 0 32px;
+          border-radius: 4px;
+          font-weight: 600;
+          @media (max-width: $widescreen) {
+            right: -24px;
+          }
+          &.two {
+            position: absolute;
+            height: 52px;
+            bottom: 280px;
+            right: -90px;
+            left: auto;
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            background: #a287ff;
+            color: black;
+            @media (max-width: $widescreen) {
+              right: -24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
