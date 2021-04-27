@@ -19,10 +19,12 @@
         transition: border .3s, -webkit-box-shadow .3s;
         transition: box-shadow .3s, border .3s;
         transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+
     }
     label {
         font-size: 1rem;
         color: #6a34e2;
+        align-items: center;
     }
 </style>
 <div class="container">
@@ -32,7 +34,7 @@
         <div class="col-4">
             <div class="center">
                 <h3>Registration</h3>
-                <form method="POST" class="form-group">
+                <form style="justify-content: center;" method="POST" class="form-group">
                     {% csrf_token %}
                     {{form | crispy}}
 

@@ -23,20 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/chatwidgetstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/lolly.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/chatwidgetstyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/register/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/register/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/materialize.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/chatbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/chatbox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/chatbox.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/data.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/register/templates/register/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/register/templates/register/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/register/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/register/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,17 @@
         <option value="package.json" />
         <option value="HTML File" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -89,25 +102,27 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\register\templates" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\templates\registration" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\js" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\img" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css\styles" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css\style" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\staticfiles\css\styles" />
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\staticfiles\css\styles\css" />
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -245,7 +260,8 @@
       <workItem from="1618996875463" duration="2075000" />
       <workItem from="1619114211066" duration="27920000" />
       <workItem from="1619146048702" duration="280000" />
-      <workItem from="1619450158379" duration="14483000" />
+      <workItem from="1619450158379" duration="14897000" />
+      <workItem from="1619474780131" duration="26357000" />
     </task>
     <servers />
   </component>
@@ -265,14 +281,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614105034131">
+    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619489036159">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614105034131" />
-    <state x="1500" y="454" key="FileChooserDialogImpl" timestamp="1618778777381">
+    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619489036159" />
+    <state x="1500" y="454" key="FileChooserDialogImpl" timestamp="1619486479568">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1500" y="454" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618778777381" />
+    <state x="1500" y="454" key="FileChooserDialogImpl/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619486479568" />
     <state width="3397" height="400" key="GridCell.Tab.0.bottom" timestamp="1617138865089">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -293,10 +309,14 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1554" y="623" key="NewPhpFileDialog/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614109419075" />
-    <state x="247" y="429" key="SettingsEditor" timestamp="1618949248083">
+    <state x="1535" y="420" key="RollbackChangesDialog" timestamp="1619474891912">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="247" y="429" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1618949248083" />
+    <state x="1535" y="420" key="RollbackChangesDialog/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619474891912" />
+    <state x="447" y="371" key="SettingsEditor" timestamp="1619487139358">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="447" y="371" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619487139358" />
     <state x="1157" y="384" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618779072038">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -306,10 +326,10 @@
     </state>
     <state x="-1188" y="413" width="1101" height="699" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@-1920.152.1920.1040" timestamp="1613052840541" />
     <state x="1311" y="351" key="new project wizard/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1614868054604" />
-    <state x="1383" y="315" key="search.everywhere.popup" timestamp="1619121069432">
+    <state x="1383" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1619486868460">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1383" y="315" key="search.everywhere.popup/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619121069432" />
+    <state x="1383" y="315" width="672" height="678" key="search.everywhere.popup/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619486868460" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

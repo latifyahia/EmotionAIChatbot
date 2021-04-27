@@ -1,14 +1,62 @@
 {% extends "base.html" %}
 {% load static %}
+{% load sass_tags %}
 {% block content %}
-<head>
+<!--<head>-->
 
-</head>
+<!--</head>-->
+<!--<div class="row">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--</div>-->
+<!-- WebDesign files -->
+
+<section class="banner" id="banner">
+    <div id="bannerBgAddition" class="banner-addition-bg"></div>
+    <div id="bannerBg" class="banner-bg"></div>
+    <div class="container">
+        <div class="row">
+            <div class="banner-inner" id="bannerInner">
+                <div class="content-outer">
+                    <div class="content-inner">
+                        <h1>
+                            <div class="line">
+                                <span>Feeling sad, happy or any type way of?</span>
+                            </div>
+                            <div class="line">
+                                <span>Go ahead and chat to lolly</span>
+                            </div>
+                        </h1>
+                        <p>
+                            We know 2020 and 2021 has been a tough year for
+                            everyone. We know majority of people are in lock down
+                            and have no one to talk to. Lolly is here for anyone to
+                            talk to about anything. We've been Helping people over
+                            come their emotions since 2020.
+                        </p>
+                        <div class="btn-row">
+                            <a href="/lolly">Chat to Lolly</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <div class="image-inner">
+                        <img src="{% static 'img/lolly_avatar.png' %}" alt="Hand" />
+                        <div class="feature-banner" id="featureBanner">
+                            Personal Statistics
+                        </div>
+                        <div class="feature-banner two" id="featureBannerGreen">
+                            &nbsp;&nbsp;&nbsp; Free To Use
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-<div class="container-lg">
-    <video style="margin-top: 30px; display: flex; border:5px solid #6a34e2; border-width: 10px" id="video" width="380" height="290" autoplay muted></video>
-</div>
 
 
 <!-- Script -->

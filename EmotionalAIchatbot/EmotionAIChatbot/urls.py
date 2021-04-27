@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
     path('home/', home),
-    path('chatbox/', chatbox),
+    path('lolly/', lolly),
     path('about/', about),
     path('profile/', profile),
     path('updateEmotions/', updateEmotions),

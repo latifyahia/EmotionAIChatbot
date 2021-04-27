@@ -29,8 +29,8 @@ def updateEmotions(request):
         data['success'] = True
     return JsonResponse(data)
 
-def chatbox(request):
-    return render(request, "chatbox.html")
+def lolly(request):
+    return render(request, "lolly.html")
 
 def about(request):
     return render(request, "about.html")
