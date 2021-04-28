@@ -3,7 +3,8 @@
 {% load sass_tags %}
 {% block content %}
 
-<!--some parts taken from https://github.com/wrongakram/html-css-hero-animation/tree/starter-->
+<!-- code taken and customized to meet my own needs from https://github.com/wrongakram/html-css-hero-animation/tree/master-->
+
 {% if user.is_authenticated %}
 <section class="banner" id="banner">
     <div id="bannerBg" class="banner-bg"></div>
@@ -100,6 +101,7 @@
 {% endif %}
 
 <script>
+
 
     const h1Line = document.querySelectorAll(".line span")
     const contentP = document.querySelector(".content-inner p")

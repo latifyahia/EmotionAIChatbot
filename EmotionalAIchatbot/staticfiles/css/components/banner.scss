@@ -1,5 +1,7 @@
+// some code taken and customized to meet my own needs from https://github.com/wrongakram/html-css-hero-animation/tree/starter
+
 @import "../variables.scss";
-// some parts taken from https://github.com/wrongakram/html-css-hero-animation/tree/starter-->
+
 .banner {
   height: 100%;
   @media (max-width: $widescreen) {

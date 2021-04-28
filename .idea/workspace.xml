@@ -24,9 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,13 +99,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -248,7 +247,8 @@
       <workItem from="1619146048702" duration="280000" />
       <workItem from="1619450158379" duration="14897000" />
       <workItem from="1619474780131" duration="27322000" />
-      <workItem from="1619556590457" duration="22482000" />
+      <workItem from="1619556590457" duration="22907000" />
+      <workItem from="1619601035316" duration="2709000" />
     </task>
     <servers />
   </component>

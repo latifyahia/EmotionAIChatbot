@@ -1,3 +1,5 @@
+// code taken and customized to meet my own needs from https://github.com/JiteshGaikwad/Chatbot-Widget
+
 //Bot pop-up intro
 document.addEventListener('DOMContentLoaded', function() {
     var elemsTap = document.querySelector('.tap-target');
