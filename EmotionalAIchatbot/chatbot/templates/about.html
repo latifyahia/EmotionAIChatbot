@@ -2,10 +2,229 @@
 {% load static %}
 {% block content %}
 
+{% if user.is_authenticated %}
+<section class="about" >
+    <div id="bannerBg" ></div>
+    <div class="container">
+        <di class="row">
+            <div class="about-inner">
+                <div class="about-content">
+                    <h3>
+                        Here to help you overcome your emotions
+                    </h3>
+                    <p>
+                        gibrish gibrish gibrish gibrish gibrish gibrish
+                        gibrish gibrish gibrish gibrish gibrish gibrish
+                        gibrish gibrish gibrish gibrish gibrish gibrish
+                    </p>
+                    <div class="btn-row">
+                        <a href="/profile">Profile</a>
+                    </div>
+                </div>
+                <div class="about-list">
+                    <ul>
+                        <li>
+                            <img src="{% static 'img/goal.svg' %}"/>
+                            <h5>Goal</h5>
+                            <p> gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/lolly_avatar.png' %}"/>
+                            <h5>Lolly</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/developer.svg' %}"/>
+                            <h5>Developer</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/features.svg' %}"/>
+                            <h5>Features</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/face-reg.svg' %}"/>
+                            <h5>Facial Recognition</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/machine-learning.svg' %}"/>
+                            <h5>Machine Learning</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </di>
+    </div>
+</section>
+{% else %}
+<section class="about" >
+    <div  class="banner-bg"></div>
+    <div class="container">
+        <di class="row">
+            <div class="about-inner">
+                <div class="about-content">
+                    <h3>
+                        Here to help you overcome your emotions
+                    </h3>
+                    <p>
+                        gibrish gibrish gibrish gibrish gibrish gibrish
+                        gibrish gibrish gibrish gibrish gibrish gibrish
+                        gibrish gibrish gibrish gibrish gibrish gibrish
+                    </p>
+                    <div class="btn-row">
+                        <a #href="/register">Register</a>
+                    </div>
+                </div>
+                <div class="about-list">
+                    <ul>
+                        <li>
+                            <img src="{% static 'img/goal.svg' %}"/>
+                            <h5>Goal</h5>
+                            <p> gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/lolly_avatar.png' %}"/>
+                            <h5>Lolly</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/developer.svg' %}"/>
+                            <h5>Developer</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/features.svg' %}"/>
+                            <h5>Features</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/face-reg.svg' %}"/>
+                            <h5>Facial Recognition</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                        <li>
+                            <img src="{% static 'img/machine-learning.svg' %}"/>
+                            <h5>Machine Learning</h5>
+                            <p>
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                                gibrish gibrish gibrish gibrish gibrish gibrish
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </di>
+    </div>
+</section>
+{% endif %}
+<script>
 
-<div class="container-sm">
-    <h1>Hello</h1>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    const h3Content = document.querySelectorAll(".about-content h3")
+    const pContent = document.querySelector(".about-content p")
+    const aboutImages = document.querySelectorAll(".about-list img")
+    const aboutHeader = document.querySelectorAll(".about-list h5")
+    const aboutParagraph = document.querySelectorAll(".about-list p")
+    const button = document.querySelector(".btn-row")
+    const timeLine = gsap.timeline();
+
+
+    timeLine
+        .from(h3Content,{
+            delay:0.8,
+            y:80,
+            opacity:0,
+            duration:0.8,
+            ease: 'power3.out',
+            stagger: {
+                amount:0.2
+            }
+        }).from([pContent, button],{
+        y:-40,
+        duration: 0.8,
+        opacity: 0,
+        ease: "power3.out",
+        stagger: {
+            amount:0.2
+        }
+    })
+
+    gsap.from(aboutImages,{
+        delay: 0.8,
+        x:-100,
+        skewX:2,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+        
+    })
+    gsap.from(aboutHeader,{
+        delay:1.3,
+        x:60,
+        skewX:6,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+        stagger: {
+            amount:0.2
+        }
+    })
+    gsap.from(aboutParagraph,{
+        delay:1.6,
+        x:60,
+        skewX:6,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+        stagger: {
+            amount:0.2
+        }
+    })
+</script>
 
 {% endblock %}

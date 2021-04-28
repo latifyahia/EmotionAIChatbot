@@ -31,9 +31,10 @@
 <div class="row-sm-2">
     <br>
 </div>
+<style>
 
+</style>
 <div class="container-fluid">
-
     <div class="row h-10">
         <div class="col-sm-3 ">
             <canvas id="pieChart" width="400" height="400"></canvas>
@@ -63,11 +64,11 @@
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-3 center-align">
-            <button id="polarButton" class="btn btn-primary" data-bs-toggle="button" type="button">Polar Chart</button>
+            <button id="polarButton" class="btn btn-primary active" data-bs-toggle="button" type="button">Polar Chart</button>
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-3 center-align">
-            <button id="barButton" class="btn btn-primary" data-bs-toggle="button" type="button">Bar Chart</button>
+            <button id="barButton" class="btn btn-primary active" data-bs-toggle="button" type="button">Bar Chart</button>
         </div>
     </div>
 </div>
@@ -86,20 +87,39 @@
     var sum = parseInt(happy) + parseInt(sad)  + parseInt(angry) + parseInt(neutral) + parseInt(fearful)
             + parseInt(surprised) + parseInt(disgusted);
     var pieClick = 3;
-    var polarClick = 2;
-    var barClick = 2;
+    var polarClick = 3;
+    var barClick = 3;
+
+    const pieAnimation = document.querySelector("#pieChart")
+    const polarAnimation = document.querySelector("#polarAreaChart")
+    const barAnimation = document.querySelector("#barChart")
+    const pieButtonAnimation = document.querySelector("#pieButton")
+    const polarButtonAnimation = document.querySelector("#polarButton")
+    const barButtonAnimation = document.querySelector("#barButton")
+
 
     document.getElementById('pieButton').onclick = function()
     {
         if ( pieClick % 2 == 0)
         {
-            $("#pieChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},750);
+            gsap.to(pieAnimation,{
+                y:0,
+                opacity:1,
+                duration:1,
+                ease: 'power3.out',
+            })
+            $("#pieButton").addClass("btn btn-primary active");
         }
         else
         {
-            $("#pieChart").animate({opacity: 0.0}, 750, function(){
-                $("#pieChart").css("visibility","hidden");
-            });
+            $("#pieButton").removeClass("btn btn-primary active")
+            $("#pieButton").addClass("btn btn-primary");
+            gsap.to(pieAnimation,{
+                y:-100,
+                opacity:0,
+                duration:1,
+                ease: 'power3.out',
+            })
         }
         pieClick++;
     }
@@ -108,13 +128,24 @@
     {
         if ( polarClick % 2 == 0)
         {
-            $("#polarAreaChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},750);
+            gsap.to(polarAnimation,{
+                y:0,
+                opacity:1,
+                duration:1,
+                ease: 'power3.out',
+            })
+            $("#polarButton").addClass("btn btn-primary active");
         }
         else
         {
-            $("#polarAreaChart").animate({opacity: 0.0}, 750, function(){
-                $("#polarAreaChart").css("visibility","hidden");
-            });
+            $("#polarButton").removeClass("btn btn-primary active")
+            $("#polarButton").addClass("btn btn-primary");
+            gsap.to(polarAnimation,{
+                y:-100,
+                opacity:0,
+                duration:1,
+                ease: 'power3.out',
+            })
         }
 
         polarClick++;
@@ -124,13 +155,25 @@
     {
         if ( barClick % 2 == 0)
         {
-            $("#barChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},750);
+            gsap.to(barAnimation,{
+                y:0,
+                opacity:1,
+                duration:1,
+                ease: 'power3.out',
+            })
+            $("#barButton").addClass("btn btn-primary active");
         }
         else
         {
-            $("#barChart").animate({opacity: 0.0}, 750, function(){
-                $("#barChart").css("visibility","hidden");
-            });
+            $("#barButton").removeClass("btn btn-primary active")
+            $("#barButton").addClass("btn btn-primary");
+            gsap.to(barAnimation,{
+                y:-100,
+                opacity:0,
+                duration:1,
+                ease: 'power3.out',
+            })
+
         }
 
         barClick++;
@@ -138,7 +181,6 @@
 
 
     var pieChart = document.getElementById('pieChart').getContext('2d');
-    $("#pieChart").css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0},1500);
     var pie = new Chart(pieChart, {
         type: 'doughnut',
         data: {
@@ -155,6 +197,7 @@
                 data: [Math.round((happy/sum)*100), Math.round((sad/sum)*100), Math.round((angry/sum)*100),
                     Math.round((surprised/sum)*100),Math.round((neutral/sum)*100),Math.round((fearful/sum)*100)
                     ,Math.round((disgusted/sum)*100)],
+                borderColor: 'rgb(218, 207, 255)',
                 backgroundColor: [
                     'rgb(33, 200, 180)',
                     'rgb(54, 162, 235)',
@@ -170,7 +213,6 @@
     });
 
     var polarAreaChart = document.getElementById('polarAreaChart').getContext('2d');
-    document.getElementById("polarAreaChart").style.visibility = "hidden";
     var polarArea = new Chart(polarAreaChart, {
         type: 'polarArea',
         data: {
@@ -195,6 +237,7 @@
                 data: [Math.round((happy/sum)*100), Math.round((sad/sum)*100), Math.round((angry/sum)*100),
                     Math.round((surprised/sum)*100),Math.round((neutral/sum)*100),Math.round((fearful/sum)*100)
                     ,Math.round((disgusted/sum)*100)],
+                borderColor: 'rgb(218, 207, 255)',
                 backgroundColor: [
                     'rgb(33, 200, 180)',
                     'rgb(0, 0, 255)',
@@ -209,7 +252,6 @@
         }
     });
     var barChart = document.getElementById('barChart').getContext('2d');
-    document.getElementById("barChart").style.visibility = "hidden";
     var chart = new Chart(barChart, {
         type: 'bar',
         data: {
@@ -227,6 +269,7 @@
                 data: [Math.round((happy/sum)*100), Math.round((sad/sum)*100), Math.round((angry/sum)*100),
                     Math.round((surprised/sum)*100),Math.round((neutral/sum)*100),Math.round((fearful/sum)*100)
                     ,Math.round((disgusted/sum)*100)],
+                borderColor: 'rgb(218, 207, 255)',
                 backgroundColor: [
                     'rgb(33, 200, 180,0.5)',
                     'rgb(0, 0, 255,0.5)',
@@ -257,7 +300,24 @@
             }
         }
     });
-
+    gsap.from([pieAnimation,polarAnimation,barAnimation],{
+        y:-100,
+        opacity:0,
+        duration:1.5,
+        ease: 'power3.out',
+        stagger: {
+            amount:1
+        }
+    })
+    gsap.from([pieButtonAnimation, polarButtonAnimation, barButtonAnimation],{
+        y:100,
+        duration: 1.5,
+        opacity: 0,
+        ease: "power3.out",
+        stagger: {
+            amount:1
+        }
+    })
 
 </script>
 

@@ -4,8 +4,8 @@
 {% block content %}
 
 <!--some parts taken from https://github.com/wrongakram/html-css-hero-animation/tree/starter-->
+{% if user.is_authenticated %}
 <section class="banner" id="banner">
-    <div id="bannerBgAddition" class="banner-addition-bg"></div>
     <div id="bannerBg" class="banner-bg"></div>
     <div class="container">
         <div class="row">
@@ -27,6 +27,9 @@
                             talk to about anything. We've been Helping people over
                             come their emotions since 2020.
                         </p>
+                        <p-lower>
+                            Visit your personal profile to view your statistics.
+                        </p-lower>
                         <div class="btn-row">
                             <a href="/lolly">Chat to Lolly</a>
                         </div>
@@ -36,9 +39,9 @@
                     <div class="image-inner">
                         <img src="{% static 'img/lolly_avatar.png' %}" alt="Hand" />
                         <div class="feature-banner" id="featureBanner">
-                            Personal Statistics
+                            Personal Statistics&nbsp;&nbsp;&nbsp;
                         </div>
-                        <div class="feature-banner two" id="featureBannerGreen">
+                        <div class="feature-banner-two" id="featureBannerGreen">
                             &nbsp;&nbsp;&nbsp; Free To Use
                         </div>
                     </div>
@@ -47,133 +50,242 @@
         </div>
     </div>
 </section>
+{% else %}
+<section class="banner" id="banner2">
+    <div id="bannerBg2" class="banner-bg"></div>
+    <div class="container">
+        <div class="row">
+            <div class="banner-inner" id="bannerInner2">
+                <div class="content-outer">
+                    <div class="content-inner">
+                        <h1>
+                            <div class="line">
+                                <span>Feeling sad, happy or any type way of?</span>
+                            </div>
+                            <div class="line">
+                                <span>Go ahead and chat to lolly</span>
+                            </div>
+                        </h1>
+                        <p>
+                            We know 2020 and 2021 has been a tough year for
+                            everyone. We know majority of people are in lock down
+                            and have no one to talk to. Lolly is here for anyone to
+                            talk to about anything. We've been Helping people over
+                            come their emotions since 2020.
+                        </p>
+                        <p-lower>
+                            Register now to chat to Lolly and see your personal
+                            statistics.
+                        </p-lower>
+                        <div class="btn-row">
+                            <a href="/register">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <div class="image-inner">
+                        <img src="{% static 'img/lolly_avatar.png' %}" alt="Hand" />
+                        <div class="feature-banner" id="featureBanner2">
+                            Personal Statistics&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <div class="feature-banner-two" id="featureBannerGreen2">
+                            &nbsp;&nbsp;&nbsp; Free To Use
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
 
+<script>
 
+    const h1Line = document.querySelectorAll(".line span")
+    const contentP = document.querySelector(".content-inner p")
+    const contentPLower = document.querySelector(".content-inner p-lower")
+    const contentButton = document.querySelector(".content-inner .btn-row")
+    const timeLine = gsap.timeline();
 
+    const lolly = document.querySelector(".image-inner img")
+    const featureBanner = document.querySelector(".feature-banner")
+    const featureBannerTwo = document.querySelector(".feature-banner-two")
+
+    timeLine
+    .from(h1Line,{
+        delay:0.4,
+        y:80,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+        stagger: {
+            amount:0.2
+        }
+    }).from([contentP,contentPLower, contentButton],{
+        y:-40,
+        duration: 0.8,
+        opacity: 0,
+        ease: "power3.out",
+        stagger: {
+            amount:0.2
+        }
+    }).from
+
+    gsap.from(lolly,{
+        delay:1.5,
+        x:-100,
+        skewX:2,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+    })
+    gsap.from(featureBanner,{
+        delay:2,
+        x:-60,
+        skewX:6,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+        stagger: {
+            amount:0.2
+        }
+    })
+    gsap.from(featureBannerTwo,{
+        delay:2,
+        x:60,
+        skewX:6,
+        opacity:0,
+        duration:0.8,
+        ease: 'power3.out',
+        stagger: {
+            amount:0.2
+        }
+    })
+</script>
 
 <!-- Script -->
 <script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/emotionData.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
-<script>
+<!--<script>-->
 
-    // var vid = document.getElementById('video')
-    // document.addEventListener('load', function () {
-    //     video.setAttribute(visibility, visible);
-    // })
-    var emotion;
-    const video = document.getElementById("video")
-
-
-    Promise.all([
-        faceapi.nets.tinyFaceDetector.loadFromUri('/static/js/models'),
-        faceapi.nets.faceLandmark68Net.loadFromUri('/static/js/models'), //drawing on face
-        faceapi.nets.faceRecognitionNet.loadFromUri('/static/js/models'), //drawing square aorund face
-        faceapi.nets.faceExpressionNet.loadFromUri('/static/js/models'), //emotions dections
-    ]).then(startVideo)
-
-    function startVideo()
-    {
-        navigator.getUserMedia({video:{}},
-        stream => video.srcObject = stream,
-            err => console.log(err)
-    )
-    }
-
-    video.addEventListener('play', () => {
-        const canvas = faceapi.createCanvasFromMedia(video)
-        const displaySize= {width: video.width, height: video.height}
-
-        setInterval(async() => {
-
-            const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions()
-            const resizedDetections =faceapi.resizeResults(detections, displaySize)
-            canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)
-            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
-
-            //converting dections into json format
-            var json_data = JSON.stringify(detections)
-
-            //changing json data to an jobject so i can parse the data
-            var json_obj = JSON.parse(json_data)[0]
-
-            //creating a array with emotions indexed so later i can retrive the type of emotion being displayed
-            var Emotions = {Happy:json_obj.expressions.happy, Neutral:json_obj.expressions.neutral, Sad:json_obj.expressions.sad, Angry:json_obj.expressions.angry,
-                Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }
-
-            //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed
-            if(Emotions["Happy"] > 0.5)
-            {
-                emotion = "Happy";
-            }
-            else if(Emotions["Neutral"] > 0.5)
-            {
-                emotion = "Neutral";
-            }
-            else if(Emotions["Sad"] > 0.5)
-            {
-                emotion = "Sad";
-            }
-            else if(Emotions["Angry"] > 0.5)
-            {
-                emotion = "Angry";
-            }
-            else if(Emotions["Neutral"] > 0.5)
-            {
-                emotion = "Neutral";
-            }
-            else if(Emotions["Fearful"] > 0.5)
-            {
-                emotion = "Fearful";
-            }
-            else if(Emotions["Surprised"] > 0.5)
-            {
-                emotion = "Surprised";
-            }
-
-            else if(Emotions["Disgusted"] > 0.5)
-            {
-                emotion = "Disgusted";
-            }
-            else
-            {
-                emotion = "Neutral"
-            }
+<!--    // var vid = document.getElementById('video')-->
+<!--    // document.addEventListener('load', function () {-->
+<!--    //     video.setAttribute(visibility, visible);-->
+<!--    // })-->
+<!--    var emotion;-->
+<!--    const video = document.getElementById("video")-->
 
 
-            //sending the emotion to my json server so i can use in rasa
-            axios.put('http://localhost:3000/emotion/1', {
-                currentEmotion: emotion
-            }).then(resp => {
+<!--    Promise.all([-->
+<!--        faceapi.nets.tinyFaceDetector.loadFromUri('/static/js/models'),-->
+<!--        faceapi.nets.faceLandmark68Net.loadFromUri('/static/js/models'), //drawing on face-->
+<!--        faceapi.nets.faceRecognitionNet.loadFromUri('/static/js/models'), //drawing square aorund face-->
+<!--        faceapi.nets.faceExpressionNet.loadFromUri('/static/js/models'), //emotions dections-->
+<!--    ]).then(startVideo)-->
 
-                console.log(resp.data);
-            }).catch(error => {
+<!--    function startVideo()-->
+<!--    {-->
+<!--        navigator.getUserMedia({video:{}},-->
+<!--        stream => video.srcObject = stream,-->
+<!--            err => console.log(err)-->
+<!--    )-->
+<!--    }-->
 
-                console.log(error);
-            });
+<!--    video.addEventListener('play', () => {-->
+<!--        const canvas = faceapi.createCanvasFromMedia(video)-->
+<!--        const displaySize= {width: video.width, height: video.height}-->
 
-            //sending the emotion to my views.py so i can save the emotions with the current logged in user
-            $.ajax({
-                type: "POST",
-                url: "/updateEmotions/",
-                data:{
-                    emotion: emotion,
-                    'csrfmiddlewaretoken': '{{ csrf_token }}'
-                },
-                datatype:'json',
-                success: function(data) {
-                    if (data['success'])
-                        console.log("successfully added to user emotions")
-                }
-            });
+<!--        setInterval(async() => {-->
 
-        }, 5000)
+<!--            const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions()-->
+<!--            const resizedDetections =faceapi.resizeResults(detections, displaySize)-->
+<!--            canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)-->
+<!--            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)-->
 
-    })
+<!--            //converting dections into json format-->
+<!--            var json_data = JSON.stringify(detections)-->
+
+<!--            //changing json data to an jobject so i can parse the data-->
+<!--            var json_obj = JSON.parse(json_data)[0]-->
+
+<!--            //creating a array with emotions indexed so later i can retrive the type of emotion being displayed-->
+<!--            var Emotions = {Happy:json_obj.expressions.happy, Neutral:json_obj.expressions.neutral, Sad:json_obj.expressions.sad, Angry:json_obj.expressions.angry,-->
+<!--                Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }-->
+
+<!--            //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed-->
+<!--            if(Emotions["Happy"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Happy";-->
+<!--            }-->
+<!--            else if(Emotions["Neutral"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Neutral";-->
+<!--            }-->
+<!--            else if(Emotions["Sad"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Sad";-->
+<!--            }-->
+<!--            else if(Emotions["Angry"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Angry";-->
+<!--            }-->
+<!--            else if(Emotions["Neutral"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Neutral";-->
+<!--            }-->
+<!--            else if(Emotions["Fearful"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Fearful";-->
+<!--            }-->
+<!--            else if(Emotions["Surprised"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Surprised";-->
+<!--            }-->
+
+<!--            else if(Emotions["Disgusted"] > 0.5)-->
+<!--            {-->
+<!--                emotion = "Disgusted";-->
+<!--            }-->
+<!--            else-->
+<!--            {-->
+<!--                emotion = "Neutral"-->
+<!--            }-->
 
 
-</script>
+<!--            //sending the emotion to my json server so i can use in rasa-->
+<!--            axios.put('http://localhost:3000/emotion/1', {-->
+<!--                currentEmotion: emotion-->
+<!--            }).then(resp => {-->
+
+<!--                console.log(resp.data);-->
+<!--            }).catch(error => {-->
+
+<!--                console.log(error);-->
+<!--            });-->
+
+<!--            //sending the emotion to my views.py so i can save the emotions with the current logged in user-->
+<!--            $.ajax({-->
+<!--                type: "POST",-->
+<!--                url: "/updateEmotions/",-->
+<!--                data:{-->
+<!--                    emotion: emotion,-->
+<!--                    'csrfmiddlewaretoken': '{{ csrf_token }}'-->
+<!--                },-->
+<!--                datatype:'json',-->
+<!--                success: function(data) {-->
+<!--                    if (data['success'])-->
+<!--                        console.log("successfully added to user emotions")-->
+<!--                }-->
+<!--            });-->
+
+<!--        }, 5000)-->
+
+<!--    })-->
+
+
+<!--</script>-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
 {% endblock %}

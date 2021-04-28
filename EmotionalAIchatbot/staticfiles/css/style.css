@@ -129,7 +129,7 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .container-fluid { height: 200px; }
 
-.container-fluid .header { position: absolute; width: 100%; height: 100px; z-index: 10; }
+.container-fluid .header { position: absolute; width: 98%; height: 100px; z-index: 10; }
 
 .container-fluid .header .container-fluid .header-inner { position: relative; height: 100px; display: flex; align-items: center; justify-content: space-between; width: 100%; }
 
@@ -185,13 +185,11 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .container-fluid .row { display: flex; align-items: center; padding: 0 16px; }
 
-.banner { height: 80vh; position: relative; }
+.banner { height: 100%; }
 
 @media (max-width: 1440px) { .banner { height: 90vh; } }
 
-.banner .banner-addition-bg { background: #dacfff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 100%; }
-
-.banner .banner-bg { background: #dacfff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 100%; }
+.banner .banner-bg { background: #dacfff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 2000px; background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), white 100%); }
 
 .banner .banner-inner { width: 100%; height: 80vh; display: flex; position: relative; }
 
@@ -199,7 +197,7 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .banner .banner-inner .content-outer { width: 60%; height: 100%; display: flex; align-items: center; }
 
-.banner .banner-inner .content-outer .content-inner h1 { font-family: "Playfair Display"; color: black; font-size: 3.4rem; line-height: 4.8rem; margin: 34px -50px -100px; width: 920px; left: 90px; }
+.banner .banner-inner .content-outer .content-inner h1 { font-family: "Playfair Display"; color: black; font-size: 3.4rem; line-height: 4.8rem; margin: -175px -50px -100px; width: 920px; left: 90px; }
 
 @media (max-width: 1440px) { .banner .banner-inner .content-outer .content-inner h1 { font-size: 3.1rem; line-height: 3.6rem; } }
 
@@ -207,13 +205,17 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .banner .banner-inner .content-outer .content-inner h1 .line span { position: absolute; }
 
-.banner .banner-inner .content-outer .content-inner p { font-size: 1rem; line-height: 1.6rem; font-weight: 300; color: black; width: 520px; margin: 180px -50px 80px; }
+.banner .banner-inner .content-outer .content-inner p { font-size: 1rem; line-height: 1.6rem; font-weight: 300; color: black; width: 520px; margin: 180px -50px 20px; }
 
 @media (max-width: 1440px) { .banner .banner-inner .content-outer .content-inner p { margin: 16px 0 60px; } }
 
-.banner .banner-inner .content-outer .content-inner .btn-row a { display: inline-block; height: 56px; line-height: 56px; font-size: 1rem; padding: 0 32px; margin: 0 -50px 0; text-decoration: none; font-weight: 600; color: black; background: #6a34e2; border-radius: 100px; }
+.banner .banner-inner .content-outer .content-inner p-lower { font-size: 1rem; line-height: 1.6rem; font-weight: 300; color: black; width: 520px; margin: 50px -50px 80px; }
 
-.banner .banner-inner .image { position: relative; width: 40%; height: 100%; display: flex; justify-content: center; align-items: flex-end; }
+@media (max-width: 1440px) { .banner .banner-inner .content-outer .content-inner p-lower { margin: 16px 0 60px; } }
+
+.banner .banner-inner .content-outer .content-inner .btn-row a { display: inline-block; height: 56px; line-height: 56px; font-size: 1rem; padding: 0 32px; margin: 50px -50px 0; text-decoration: none; font-weight: 600; color: black; background: #6a34e2; border-radius: 100px; }
+
+.banner .banner-inner .image { position: relative; width: 40%; height: 100%; display: flex; justify-content: center; align-items: flex-end; margin-top: -125px; }
 
 .banner .banner-inner .image .image-inner img { width: 450px; position: absolute; bottom: 15vh; transform: rotate(25deg); left: 200px; right: -150px; z-index: 9; }
 
@@ -223,9 +225,61 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 @media (max-width: 1440px) { .banner .banner-inner .image .image-inner .feature-banner { right: -24px; } }
 
-.banner .banner-inner .image .image-inner .feature-banner.two { position: absolute; height: 52px; bottom: 280px; right: -90px; left: auto; display: flex; align-items: center; padding: 0 32px; border-radius: 4px; font-weight: 600; background: #a287ff; color: black; }
+.banner .banner-inner .image .image-inner .feature-banner-two { position: absolute; height: 52px; bottom: 280px; right: -95px; left: auto; display: flex; align-items: center; padding: 0 32px; border-radius: 4px; font-weight: 600; background: #a287ff; color: black; }
 
-@media (max-width: 1440px) { .banner .banner-inner .image .image-inner .feature-banner.two { right: -24px; } }
+@media (max-width: 1440px) { .banner .banner-inner .image .image-inner .feature-banner-two { right: -24px; } }
+
+body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; height: 2000px; }
+
+.container { width: 1345px; min-width: 1345px; margin: 0 auto; }
+
+@media (max-width: 1440px) { .container { width: 1153px; min-width: 1153px; } }
+
+@media (max-width: 1152px) { .container { width: 961px; min-width: 961px; } }
+
+@media (max-width: 960px) { .container { width: 767px; min-width: 767px; } }
+
+@media (max-width: 768px) { .container { width: 481px; min-width: 481px; } }
+
+@media (max-width: 480px) { .container { width: 320px; min-width: 320px; } }
+
+.container .row { display: flex; align-items: center; padding: 0 16px; }
+
+.container-fluid { padding: 0 48px; }
+
+.container-fluid .row { display: flex; align-items: center; padding: 0 16px; }
+
+.about { height: 100%; margin-top: 15vh; }
+
+.about .banner-bg { background: #dacfff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 2000px; background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), white 100%); }
+
+.about .about-inner { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.about .about-inner .about-content { width: 33%; }
+
+@media (max-width: 1440px) { .about .about-inner .about-content { width: 40%; } }
+
+.about .about-inner .about-content h3 { font-family: "Playfair Display"; color: black; font-size: 3.4rem; line-height: 4.8rem; margin: 0 -175px -100px; width: 450px; left: 90px; }
+
+.about .about-inner .about-content p { font-size: 1rem; line-height: 1.6rem; font-weight: 300; color: black; width: 350px; margin: 130px -175px 20px; }
+
+@media (max-width: 1440px) { .about .about-inner .about-content p { padding-right: 60px; } }
+
+.about .about-inner .about-content .btn-row a { display: inline-block; height: 56px; line-height: 56px; font-size: 1rem; padding: 0 32px; margin: 50px -175px 0; text-decoration: none; font-weight: 600; color: black; background: #6a34e2; border-radius: 100px; }
+
+.about .about-inner .about-list { width: 100%; display: flex; justify-content: center; }
+
+.about .about-inner .about-list ul { display: flex; justify-content: space-between; flex-wrap: wrap; padding: 0; }
+
+.about .about-inner .about-list ul li { list-style: none; }
+
+.about .about-inner .about-list ul li img { margin-bottom: 24px; margin-left: -10px; width: 60px; height: 60px; }
+
+.about .about-inner .about-list ul li h5 { color: #6a34e2; font-weight: 600; font-size: 1.2rem; margin: 0; }
+
+.about .about-inner .about-list ul li p { line-height: 1.8rem; font-weight: 300; color: black; width: 270px; margin: 16px 0 72px; font-size: 1rem; }
+
+@media (max-width: 1440px) { .about .about-inner .about-list ul li p { font-size: 0.875rem; } }
 
 body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; height: 2000px; }
 

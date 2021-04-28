@@ -23,14 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/components/banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/components/banner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/components/features.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/components/features.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/components/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/normalize.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/normalize.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,27 +90,25 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.xml" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\js" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css\styles" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css\style" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\staticfiles\css\styles" />
-      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\staticfiles\css\styles\css" />
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -253,7 +247,8 @@
       <workItem from="1619114211066" duration="27920000" />
       <workItem from="1619146048702" duration="280000" />
       <workItem from="1619450158379" duration="14897000" />
-      <workItem from="1619474780131" duration="27079000" />
+      <workItem from="1619474780131" duration="27322000" />
+      <workItem from="1619556590457" duration="22482000" />
     </task>
     <servers />
   </component>
@@ -305,10 +300,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1535" y="420" key="RollbackChangesDialog/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619474891912" />
-    <state x="447" y="371" key="SettingsEditor" timestamp="1619487139358">
+    <state x="447" y="371" key="SettingsEditor" timestamp="1619556979183">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="447" y="371" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619487139358" />
+    <state x="447" y="371" key="SettingsEditor/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619556979183" />
     <state x="1157" y="384" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1618779072038">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>

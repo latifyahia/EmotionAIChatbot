@@ -12,11 +12,24 @@
         -webkit-transition: visibility 0s .3s;
         transition: visibility 0s .3s;
     }
-    .tap-target-wave {
+
+    .tap-target-wave::before, .tap-target-wave::after {
+        /* content: ''; */
+        /* display: block; */
+        content: none;
         position: fixed;
         border-radius: 20%;
         z-index: 10001;
     }
+    h5 {
+        font-size: 1.64rem;
+        line-height: 300%;
+        margin-right: -100px;
+        margin-bottom: -15px;
+        left: -100px;
+        margin-top: -150px;
+    }
+
 </style>
 <div class="container-fluid">
 
@@ -70,6 +83,124 @@
 
 
 </div>
+<script>
+
+    // var vid = document.getElementById('video')
+    // document.addEventListener('load', function () {
+    //     video.setAttribute(visibility, visible);
+    // })
+    var emotion;
+    const video = document.getElementById("video")
+
+
+    Promise.all([
+        faceapi.nets.tinyFaceDetector.loadFromUri('/static/js/models'),
+        faceapi.nets.faceLandmark68Net.loadFromUri('/static/js/models'), //drawing on face
+        faceapi.nets.faceRecognitionNet.loadFromUri('/static/js/models'), //drawing square aorund face
+        faceapi.nets.faceExpressionNet.loadFromUri('/static/js/models'), //emotions dections
+    ]).then(startVideo)
+
+    function startVideo()
+    {
+        navigator.getUserMedia({video:{}},
+            stream => video.srcObject = stream,
+            err => console.log(err)
+        )
+    }
+
+    video.addEventListener('play', () => {
+        const canvas = faceapi.createCanvasFromMedia(video)
+        const displaySize= {width: video.width, height: video.height}
+
+        setInterval(async() => {
+
+            const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceExpressions()
+            const resizedDetections =faceapi.resizeResults(detections, displaySize)
+            canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)
+            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+
+            //converting dections into json format
+            var json_data = JSON.stringify(detections)
+
+            //changing json data to an jobject so i can parse the data
+            var json_obj = JSON.parse(json_data)[0]
+
+            //creating a array with emotions indexed so later i can retrive the type of emotion being displayed
+            var Emotions = {Happy:json_obj.expressions.happy, Neutral:json_obj.expressions.neutral, Sad:json_obj.expressions.sad, Angry:json_obj.expressions.angry,
+                Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }
+
+            //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed
+            if(Emotions["Happy"] > 0.5)
+            {
+                emotion = "Happy";
+            }
+            else if(Emotions["Neutral"] > 0.5)
+            {
+                emotion = "Neutral";
+            }
+            else if(Emotions["Sad"] > 0.5)
+            {
+                emotion = "Sad";
+            }
+            else if(Emotions["Angry"] > 0.5)
+            {
+                emotion = "Angry";
+            }
+            else if(Emotions["Neutral"] > 0.5)
+            {
+                emotion = "Neutral";
+            }
+            else if(Emotions["Fearful"] > 0.5)
+            {
+                emotion = "Fearful";
+            }
+            else if(Emotions["Surprised"] > 0.5)
+            {
+                emotion = "Surprised";
+            }
+
+            else if(Emotions["Disgusted"] > 0.5)
+            {
+                emotion = "Disgusted";
+            }
+            else
+            {
+                emotion = "Neutral"
+            }
+
+
+            //sending the emotion to my json server so i can use in rasa
+            axios.put('http://localhost:3000/emotion/1', {
+                currentEmotion: emotion
+            }).then(resp => {
+
+                console.log(resp.data);
+            }).catch(error => {
+
+                console.log(error);
+            });
+
+            //sending the emotion to my views.py so i can save the emotions with the current logged in user
+            $.ajax({
+                type: "POST",
+                url: "/updateEmotions/",
+                data:{
+                    emotion: emotion,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                datatype:'json',
+                success: function(data) {
+                    if (data['success'])
+                        console.log("successfully added to user emotions")
+                }
+            });
+
+        }, 5000)
+
+    })
+
+
+</script>
 
 <!--JavaScript at end of body for optimized loading-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
