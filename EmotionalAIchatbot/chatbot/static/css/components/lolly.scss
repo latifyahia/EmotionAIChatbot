@@ -1,0 +1,127 @@
+@import "../variables.scss";
+
+.video {
+  height: 20%;
+  margin-top: 12vh;
+  margin-left: -525px;
+  .video-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .video-content {
+      width: 50%;
+      @media (max-width: $widescreen) {
+        width: 40%;
+      }
+      h3 {
+        font-family: "Playfair Display";
+        color: black;
+        font-size: 3.4rem;
+        line-height: 4.8rem;
+        margin: 0 0 -100px;
+        width: 550px;
+        left: 90px;
+        @media (max-width: $widescreen) {
+          font-size: 3.1rem;
+          line-height: 3.6rem;
+        }
+
+        .line {
+          overflow: hidden;
+          height: 70px;
+          position: relative;
+
+          span {
+            position: absolute;
+          }
+        }
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        font-weight: 300;
+        color: black;
+        width: 400px;
+        margin: 150px 0 0;
+        @media (max-width: $widescreen) {
+          margin: 16px 0 60px;
+        }
+      }
+    }
+    .video-frame {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      @media (max-width: $widescreen) {
+        font-size: 3.1rem;
+        line-height: 3.6rem;
+      }
+      .video-background{
+        margin-left: 90px;
+        margin-top: -30px;
+        width: 720px;
+        height: 540px;
+        z-index: -1;
+        background: #6a34e2;
+        filter: blur(50px);
+      }
+      .video-cam{
+        margin-left: -710px;
+        width: 700px;
+        height: 480px;
+      }
+    }
+    .emotion-list {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-left: 100px;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0;
+        li {
+          list-style: none;
+          h4 {
+            color: black;
+            font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+  }
+  .error-checking{
+    h4 {
+      font-family: "Playfair Display";
+      color: black;
+      align-items: center;
+      font-size: 1.5rem;
+      line-height: 0.5rem;
+      margin-left: 830px;
+      margin-bottom: -310px;
+      margin-top: 70px;
+      width: 550px;
+      height: 50px;
+      @media (max-width: $widescreen) {
+        font-size: 3.1rem;
+        line-height: 3.6rem;
+      }
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.6rem;
+      font-weight: 300;
+      color: black;
+      width: 400px;
+      margin-left: 810px;
+      margin-top: 300px;
+      @media (max-width: $widescreen) {
+        margin: 16px 0 60px;
+      }
+    }
+  }
+}

@@ -33,7 +33,72 @@
 </style>
 
 <!--code taken and customized to meet my own needs from https://github.com/JiteshGaikwad/Chatbot-Widget-->
+<section class="video" >
+    <div class="container">
+        <di class="row">
+            <div class="video-inner">
+                <div class="video-content">
+                    <h3>
+                        <div class="line">
+                            <span id="1">Want to get the full</span>
+                        </div>
+                        <div class="line">
+                            <span id="2">Experience? Go ahead</span>
+                        </div>
+                        <div class="line">
+                            <span id="3">and enable your webcam</span>
+                        </div>
+                    </h3>
+                    <p id="subtext">
+                        In order to get the full experience,
+                        we need to access you webcam to run our
+                        facial recognition software to detect the
+                        emotions you are displaying. Please refresh
+                        the page when you have enabled your camera.
+                    </p>
+                </div>
+                <div class="video-frame">
+                    <div class="video-background"></div>
+                    <video class="video-cam" id="video"  autoplay muted></video>
+                </div>
+                <div class="emotion-list">
+                    <ul>
+                        <li>
+                            <h4 class="emotion-title" id="happy">Happy</h4>
+                        </li>
+                        <li>
+                            <h4 class="emotion-title" id="sad">Sad</h4>
+                        </li>
+                        <li>
+                            <h4 class="emotion-title" id="angry">Angry</h4>
+                        </li>
+                        <li>
+                            <h4 class="emotion-title" id="neutral">Neutral</h4>
+                        </li>
+                        <li>
+                            <h4 class="emotion-title" id="surprised">Surprised</h4>
+                        </li>
+                        <li>
+                            <h4 class="emotion-title" id="fearful">Fearful</h4>
+                        </li>
+                        <li>
+                            <h4 class="emotion-title" id="disgusted">Disgusted</h4>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="error-checking">
+                <h4 id="errorHeading">We are not detecting any faces!</h4>
+                <p id="errorSubheading">
+                    Our facial recognition isn't detecting a face in
+                    the webcam. Please adjust your positioning or webcam.
+                </p>
+            </div>
+        </di>
+    </div>
+</section>
 <div class="container-fluid">
+
     <!--chatbot widget -->
     <div class="widget">
         <div class="chat_header">
@@ -82,7 +147,66 @@
 
 
 </div>
+<script type="text/javascript" src="{% static 'js/face-api.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/emotionData.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script>
+
+    const emotionList = [document.querySelectorAll(".emotion-list ul li")];
+    const h1Line = document.querySelectorAll(".line span")
+    const videoCam = document.querySelectorAll(".video-frame video")
+    const videoBackground = document.querySelectorAll(".video-frame div")
+    const contentP = document.querySelector(".video-inner p")
+    const neutralAnimation = document.querySelector("#neutral")
+    const happyAnimation = document.querySelector("#happy")
+    const sadAnimation = document.querySelector("#sad")
+    const surprisedAnimation = document.querySelector("#surprised")
+    const fearfulAnimation = document.querySelector("#fearful")
+    const angryAnimation = document.querySelector("#angry")
+    const disgustedAnimation = document.querySelector("#disgusted")
+    const errorHeadingAnimation = document.querySelector("#errorHeading")
+    const errorSubheadingAnimation = document.querySelector("#errorSubheading")
+    const timeLine = gsap.timeline();
+    var errorCount = 0;
+    timeLine
+        .from(h1Line,{
+            delay:1,
+            y:80,
+            opacity:0,
+            duration:0.8,
+            ease: 'power3.out',
+            stagger: {
+                amount:0.2
+            }
+        }).from(contentP,{
+        y:-40,
+        duration: 0.8,
+        opacity: 0,
+        ease: "power3.out",
+        stagger: {
+            amount:0.2
+            }
+        }).from([videoCam,videoBackground],{
+        y:100,
+        duration: 0.8,
+        opacity: 0,
+        ease: "power3.out",
+        })
+
+    gsap.from(emotionList, {
+        delay:1,
+        x:65,
+        opacity:0,
+        duration: 0.8,
+        stagger:{
+            amount: 0.6
+        }
+
+    })
+
+    $("#errorHeading").css({visibility:"hidden", opacity: 0.0})
+    $("#errorSubheading").css({visibility:"hidden", opacity: 0.0})
+
 
     /*
     some code taken and customized to suit my needs from https://github.com/WebDevSimplified/Face-Detection-JavaScript
@@ -90,7 +214,6 @@
      */
     var emotion;
     const video = document.getElementById("video")
-
 
     Promise.all([
         faceapi.nets.tinyFaceDetector.loadFromUri('/static/js/models'),
@@ -104,12 +227,23 @@
         navigator.getUserMedia({video:{}},
             stream => video.srcObject = stream,
             err => console.log(err)
+
         )
+
     }
 
     video.addEventListener('play', () => {
         const canvas = faceapi.createCanvasFromMedia(video)
-        const displaySize= {width: video.width, height: video.height}
+        const displaySize= {width: 680, height: 480}
+
+        document.getElementById('1').textContent = 'Great, your camera'
+        document.getElementById('2').textContent = 'is on. Lolly will now'
+        document.getElementById('3').textContent = 'take care of you'
+        document.getElementById('subtext').textContent = 'Since your camera is on, ' +
+                                                    ' Lolly will be able to take care of you. Feel free to talk about anything relating to how youre' +
+                                                    ' feeling. Conversations between you and Lolly are secure and only visible to you.' +
+                                                    ' To chat to Lolly, please click the icon at the bottom right of your screen'
+
 
         setInterval(async() => {
 
@@ -118,81 +252,574 @@
             canvas.getContext('2d').clearRect(0,0,canvas.width, canvas.height)
             faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
 
-            //converting dections into json format
-            var json_data = JSON.stringify(detections)
 
-            //changing json data to an jobject so i can parse the data
-            var json_obj = JSON.parse(json_data)[0]
+            try {
+                //converting dections into json format
+                var json_data = JSON.stringify(detections)
 
-            //creating a array with emotions indexed so later i can retrive the type of emotion being displayed
-            var Emotions = {Happy:json_obj.expressions.happy, Neutral:json_obj.expressions.neutral, Sad:json_obj.expressions.sad, Angry:json_obj.expressions.angry,
-                Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }
+                //changing json data to an jobject so i can parse the data
+                var json_obj = JSON.parse(json_data)[0]
 
-            //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed
-            if(Emotions["Happy"] > 0.5)
-            {
-                emotion = "Happy";
-            }
-            else if(Emotions["Neutral"] > 0.5)
-            {
-                emotion = "Neutral";
-            }
-            else if(Emotions["Sad"] > 0.5)
-            {
-                emotion = "Sad";
-            }
-            else if(Emotions["Angry"] > 0.5)
-            {
-                emotion = "Angry";
-            }
-            else if(Emotions["Neutral"] > 0.5)
-            {
-                emotion = "Neutral";
-            }
-            else if(Emotions["Fearful"] > 0.5)
-            {
-                emotion = "Fearful";
-            }
-            else if(Emotions["Surprised"] > 0.5)
-            {
-                emotion = "Surprised";
-            }
+                //creating a array with emotions indexed so later i can retrive the type of emotion being displayed
+                var Emotions = {Happy:json_obj.expressions.happy, Neutral:json_obj.expressions.neutral, Sad:json_obj.expressions.sad, Angry:json_obj.expressions.angry,
+                    Fearful:json_obj.expressions.fearful, Surprised:json_obj.expressions.surprised, Disgusted:json_obj.expressions.disgusted }
+                //checking which emotions is being displayed between 0-1. Which ever emotion is presenting a greater than 0.5 value is being taken as the emotioned displayed
+                if(Emotions["Happy"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
 
-            else if(Emotions["Disgusted"] > 0.5)
-            {
-                emotion = "Disgusted";
-            }
-            else
-            {
-                emotion = "Neutral"
-            }
-
-
-            //sending the emotion to my json server so i can use in rasa
-            axios.put('http://localhost:3000/emotion/1', {
-                currentEmotion: emotion
-            }).then(resp => {
-
-                console.log(resp.data);
-            }).catch(error => {
-
-                console.log(error);
-            });
-
-            //sending the emotion to my views.py so i can save the emotions with the current logged in user
-            $.ajax({
-                type: "POST",
-                url: "/updateEmotions/",
-                data:{
-                    emotion: emotion,
-                    'csrfmiddlewaretoken': '{{ csrf_token }}'
-                },
-                datatype:'json',
-                success: function(data) {
-                    if (data['success'])
-                        console.log("successfully added to user emotions")
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Happy";
+                    gsap.to(neutralAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
                 }
-            });
+                else if(Emotions["Neutral"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Neutral";
+                    gsap.to(neutralAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                }
+                else if(Emotions["Sad"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Sad";
+                    gsap.to(neutralAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                }
+                else if(Emotions["Angry"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Angry";
+                    gsap.to(neutralAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                }
+
+                else if(Emotions["Fearful"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Fearful";
+                    gsap.to(neutralAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                }
+                else if(Emotions["Surprised"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Surprised";
+                    gsap.to(neutralAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                }
+
+                else if(Emotions["Disgusted"] > 0.5)
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Disgusted";
+                    gsap.to(neutralAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                }
+                else
+                {
+                    if(errorCount != 0)
+                    {
+                        gsap.to(errorHeadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+
+                        gsap.to(errorSubheadingAnimation,{
+                            y:50,
+                            duration: 0.8,
+                            opacity: 0,
+                            ease: "power3.out",
+                        })
+                    }
+                    errorCount = 0;
+                    emotion = "Neutral"
+                    gsap.to(neutralAnimation,{
+                        duration: 1.5,
+                        opacity: 1,
+                        color: '#6a34e2',
+                        ease: "power3.out",
+                    })
+                    gsap.to(happyAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(sadAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(angryAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(fearfulAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(disgustedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                    gsap.to(surprisedAnimation,{
+                        duration: 1,
+                        opacity: 1,
+                        color: 'black',
+                        ease: "power3.out",
+                    })
+                }
+
+                console.log(emotion)
+                //sending the emotion to my json server so i can use in rasa
+                axios.put('http://localhost:3000/emotion/1', {
+                    currentEmotion: emotion
+                }).then(resp => {
+
+                    console.log(resp.data);
+                }).catch(error => {
+
+                    console.log(error);
+                });
+
+                //sending the emotion to my views.py so i can save the emotions with the current logged in user
+                $.ajax({
+                    type: "POST",
+                    url: "/updateEmotions/",
+                    data:{
+                        emotion: emotion,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    datatype:'json',
+                    success: function(data) {
+                        if (data['success'])
+                            console.log("successfully added to user emotions")
+                    }
+                });
+            }
+            catch (error) {
+                errorCount++;
+                if(errorCount == 1)
+                {
+                    console.log(errorCount)
+                    $("#errorHeading").css({visibility:"visible", opacity: 0})
+                    $("#errorSubheading").css({visibility:"visible", opacity: 0})
+                    gsap.to(errorHeadingAnimation,{
+                        y:-25,
+                        duration: 1,
+                        opacity: 1,
+                        ease: "power3.out",
+                    })
+                    gsap.to(errorSubheadingAnimation,{
+                        y:-25,
+                        duration: 1,
+                        opacity: 1,
+                        ease: "power3.out",
+                    })
+                }
+                console.log('error catched')
+            };
 
         }, 5000)
 
