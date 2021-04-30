@@ -25,8 +25,6 @@ SECRET_KEY = 'j%3oga&8lwz_#u*bfkwvisq3-(lxpj9e8e+l6n0jy+m!q_f)u3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -51,6 +49,7 @@ STATICFILES_FINDERS = [
 ]
 
 MIDDLEWARE = [
+    'chatbot.middleware.CustomCorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -149,3 +148,4 @@ SASS_OUTPUT_STYLE = 'compact'
 SASS_PROCESSOR_INCLUDE_DIRS = [
     os.path.join(BASE_DIR, 'chatbot/static'),
 ]
+
