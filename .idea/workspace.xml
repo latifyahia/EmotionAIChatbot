@@ -23,9 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/about.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/banner.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/features.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/data.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/lolly.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/lolly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +99,7 @@
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.37" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="jdk.selected.PYTHON_MODULE" value="Python 3.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/static/css" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -93,6 +107,9 @@
     <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.xml" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\js" />
       <recent name="C:\Users\Tofi\Desktop\ChatBot\EmotionalAIChatbot\chatbot\static\css\styles" />
@@ -102,13 +119,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -250,7 +269,8 @@
       <workItem from="1619474780131" duration="27322000" />
       <workItem from="1619556590457" duration="22907000" />
       <workItem from="1619601035316" duration="3248000" />
-      <workItem from="1619695891690" duration="20909000" />
+      <workItem from="1619695891690" duration="21500000" />
+      <workItem from="1619730047799" duration="27408000" />
     </task>
     <servers />
   </component>

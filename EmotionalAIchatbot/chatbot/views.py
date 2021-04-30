@@ -3,6 +3,7 @@ import urllib, json
 import urllib3
 import os
 import requests
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from io import BytesIO
 import os
@@ -35,6 +36,7 @@ def lolly(request):
 def about(request):
     return render(request, "about.html")
 
+@login_required(login_url='login')
 def profile(request):
 
     userEmotions = {
@@ -52,7 +54,6 @@ def profile(request):
     for data in userData:
         emotion = data
         if(str(emotion.user) == str(current_user)):
-            print(emotion)
             if(str(emotion) == 'Happy'):
                 userEmotions['happy'] += 1
 
@@ -74,8 +75,4 @@ def profile(request):
             elif(str(emotion) == 'Disgusted'):
                 userEmotions['disgusted'] += 1
 
-
-    # userDataName = userData.user
-    # print(userData.user)
-    print(userEmotions)
     return render(request, "data.html", {'userEmotions':userEmotions})

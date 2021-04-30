@@ -149,5 +149,33 @@
         }
       }
     }
+    .image-inner-2 {
+      img {
+        width: 850px;
+        position: absolute;
+        bottom: 15vh;
+        left: 200px;
+        right: -150px;
+        margin-left: -2200px;
+        z-index: 9;
+        @media (max-width: $widescreen) {
+          width: 400px;
+        }
+      }
+    }
+    .image-inner-3 {
+      img {
+        width: 850px;
+        position: absolute;
+        bottom: 15vh;
+        left: 200px;
+        right: -150px;
+        margin-left: 600px;
+        z-index: 9;
+        @media (max-width: $widescreen) {
+          width: 400px;
+        }
+      }
+    }
   }
 }

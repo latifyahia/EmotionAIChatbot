@@ -2,9 +2,13 @@
 
 //Bot pop-up intro
 document.addEventListener('DOMContentLoaded', function() {
-    var elemsTap = document.querySelector('.tap-target');
-    var instancesTap = M.TapTarget.init(elemsTap, {});
-    instancesTap.open();
+    setTimeout(document)
+    setTimeout(function() {
+        var elemsTap = document.querySelector('.tap-target');
+        var instancesTap = M.TapTarget.init(elemsTap, {});
+        instancesTap.open();
+    }, 2000);
+
     setTimeout(function() { instancesTap.close(); }, 5500);
 
 });

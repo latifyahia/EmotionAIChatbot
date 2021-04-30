@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-{% if user.is_authenticated %}
+
 <style>
     .btn-primary.active, .btn-primary:active {
         background-color: #6a34e2;
         border-color: #6a34e2;
         color: black;
+        margin-bottom: 30px;
     }
     .btn-primary {
         background-color: white;
         border-color: white;
-        color: black
+        color: black;
+        margin-bottom: 15px;
 
     }
     .visible {
@@ -25,34 +27,119 @@
         transition: visibility 0s 2s, opacity 2s linear;
     }
 </style>
-<div class="row-sm-2">
-    <br>
-</div>
-<div class="row-sm-2">
-    <br>
-</div>
-<style>
+<section class="profile">
+    <div class="container">
+        <div class="row">
+            <div class="profile-inner">
+                <div class="profile-content">
+                    <div class="profile-list">
+                        <ul>
+                            <li>
+                                <h3>
+                                    User Name
+                                </h3>
+                                <h2>
+                                    tofi1298
+                                </h2>
+                            </li>
 
-</style>
+                            <li>
+                                <h3>
+                                    First Name
+                                </h3>
+                                <h2>
+                                    tofi1298
+                                </h2>
+                            </li>
+                            <li>
+                                <h3>
+                                    Last Name
+                                </h3>
+                                <h2>
+                                    tofi1298
+                                </h2>
+                            </li>
+                            <li>
+                                <h3>
+                                    Email Address
+                                </h3>
+                                <h2>
+                                    tofi1298
+                                </h2>
+                            </li>
+                            <li>
+                                <h3>
+                                    Date Joined
+                                </h3>
+                                <h2>
+                                    tofi1298
+                                </h2>
+                            </li>
+                            <li>
+                                <h3>
+                                    Last Login
+                                </h3>
+                                <h2>
+                                    tofi1298
+                                </h2>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile-title-info">
+                        <h3>
+                            <div class="line">
+                                <span>Want to view your</span>
+                            </div>
+                            <div class="line">
+                                <span>personal statistics?</span>
+                            </div>
+                            <div class="line">
+                                <span>Scroll down</span>
+                            </div>
+                        </h3>
+                    </div>
+                    <div class="image">
+                        <div class="image-inner">
+                            <img src="{% static 'img/stats-2.svg' %}">
+                        </div>
+                        <div class="image-inner-2">
+                            <img src="{% static 'img/personal-info.svg' %}">
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h3>
+                        <div class="line-2">
+                            <span>Personal information</span>
+                        </div>
+                        <div class="line-2">
+                            <span>can be found on right</span>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="container-fluid">
     <div class="row h-10">
+        <input id="happy" hidden="true" value={{userEmotions.happy}}>
+        <input id="sad" hidden="true" value={{userEmotions.sad}}>
+        <input id="angry" hidden="true" value={{userEmotions.angry}}>
+        <input id="neutral" hidden="true" value={{userEmotions.neutral}}>
+        <input id="fearful" hidden="true" value={{userEmotions.fearful}}>
+        <input id="surprised" hidden="true" value={{userEmotions.surprised}}>
+        <input id="disgusted" hidden="true" value={{userEmotions.disgusted}}>
         <div class="col-sm-3 ">
-            <canvas id="pieChart" width="400" height="400"></canvas>
-            <input id="happy" hidden="true" value={{userEmotions.happy}}>
-            <input id="sad" hidden="true" value={{userEmotions.sad}}>
-            <input id="angry" hidden="true" value={{userEmotions.angry}}>
-            <input id="neutral" hidden="true" value={{userEmotions.neutral}}>
-            <input id="fearful" hidden="true" value={{userEmotions.fearful}}>
-            <input id="surprised" hidden="true" value={{userEmotions.surprised}}>
-            <input id="disgusted" hidden="true" value={{userEmotions.disgusted}}>
+            <canvas id="pieChart" width="200" height="200"></canvas>
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
-            <canvas id="polarAreaChart" width="400" height="400"></canvas>
+            <canvas id="polarAreaChart" width="200" height="200"></canvas>
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
-            <canvas id="barChart" width="400" height="400"></canvas>
+            <canvas id="barChart" width="200" height="200"></canvas>
         </div>
     </div>
     <div class="row h-25">
@@ -74,9 +161,70 @@
 </div>
 
 
-<!-- code taken and customized to meet my own needs from https://www.chartjs.org/docs/latest/ -->
+
+<!-- chart plotting code taken and customized to meet my own needs from https://www.chartjs.org/docs/latest/ -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
+
+    const pieAnimation = document.querySelector("#pieChart")
+    const polarAnimation = document.querySelector("#polarAreaChart")
+    const barAnimation = document.querySelector("#barChart")
+    const pieButtonAnimation = document.querySelector("#pieButton")
+    const polarButtonAnimation = document.querySelector("#polarButton")
+    const barButtonAnimation = document.querySelector("#barButton")
+    const imageOneAnimation = document.querySelector(".image-inner")
+    const imageTwoAnimation = document.querySelector(".image-inner-2")
+    const userInfoList = document.querySelectorAll(".profile-list ul li")
+    const statsHeading = document.querySelectorAll(".line span")
+    const personalInfoHeading = document.querySelectorAll(".line-2 span")
+
+    gsap.from(imageOneAnimation, {
+        delay:0.5,
+        x:1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+
+    })
+    gsap.from(imageTwoAnimation, {
+        delay:0.5,
+        x:-1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+
+    })
+    gsap.from(userInfoList, {
+        delay:0.5,
+        y:500,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger:{
+            amount: 0.8
+        }
+    })
+    gsap.from(statsHeading, {
+        delay:2,
+        x:-1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger:{
+            amount: 0.5
+        }
+    })
+    gsap.from(personalInfoHeading, {
+        delay:2,
+        x:-1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger:{
+            amount: 0.5
+        }
+
+    })
     var happy = document.getElementById('happy').value;
     var sad = document.getElementById('sad').value;
     var angry = document.getElementById('angry').value;
@@ -85,17 +233,10 @@
     var surprised = document.getElementById('surprised').value;
     var disgusted = document.getElementById('disgusted').value;
     var sum = parseInt(happy) + parseInt(sad)  + parseInt(angry) + parseInt(neutral) + parseInt(fearful)
-            + parseInt(surprised) + parseInt(disgusted);
+        + parseInt(surprised) + parseInt(disgusted);
     var pieClick = 3;
     var polarClick = 3;
     var barClick = 3;
-
-    const pieAnimation = document.querySelector("#pieChart")
-    const polarAnimation = document.querySelector("#polarAreaChart")
-    const barAnimation = document.querySelector("#barChart")
-    const pieButtonAnimation = document.querySelector("#pieButton")
-    const polarButtonAnimation = document.querySelector("#polarButton")
-    const barButtonAnimation = document.querySelector("#barButton")
 
 
     document.getElementById('pieButton').onclick = function()
@@ -321,20 +462,5 @@
 
 </script>
 
-{% else %}
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-        </div>
-        <div class="col-4">
-            <div class="center">
-                <h3>Login</h3>
-                <p>Don't have an account? Create one <a href="/register">Here</a></p>
-                <a type="submit" style="background-color: #6a34e2; border-color: #6a34e2;" class="btn btn-success" href="/login">Go To Login</a>
-            </div>
-        </div>
-    </div>
-</div>
-{% endif %}
 
 {% endblock %}

@@ -46,6 +46,12 @@
                             &nbsp;&nbsp;&nbsp; Free To Use
                         </div>
                     </div>
+                    <div class="image-inner-2">
+                        <img src="{% static 'img/fireworks.svg' %}" />
+                    </div>
+                    <div class="image-inner-3">
+                        <img src="{% static 'img/floating.svg' %}" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,13 +91,19 @@
                 </div>
                 <div class="image">
                     <div class="image-inner">
-                        <img src="{% static 'img/lolly_avatar.png' %}" alt="Hand" />
+                        <img src="{% static 'img/lolly_avatar.png' %}" />
                         <div class="feature-banner" id="featureBanner2">
                             Personal Statistics&nbsp;&nbsp;&nbsp;
                         </div>
                         <div class="feature-banner-two" id="featureBannerGreen2">
                             &nbsp;&nbsp;&nbsp; Free To Use
                         </div>
+                    </div>
+                    <div class="image-inner-2">
+                        <img src="{% static 'img/fireworks.svg' %}" />
+                    </div>
+                    <div class="image-inner-3">
+                        <img src="{% static 'img/floating.svg' %}" />
                     </div>
                 </div>
             </div>
@@ -108,10 +120,28 @@
     const contentPLower = document.querySelector(".content-inner p-lower")
     const contentButton = document.querySelector(".content-inner .btn-row")
     const timeLine = gsap.timeline();
-
     const lolly = document.querySelector(".image-inner img")
+    const img1 = document.querySelector(".image-inner-2 img")
+    const img2 = document.querySelector(".image-inner-3 img")
     const featureBanner = document.querySelector(".feature-banner")
     const featureBannerTwo = document.querySelector(".feature-banner-two")
+
+
+    gsap.from(img1, {
+        x:-1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+
+    })
+
+    gsap.from(img2, {
+        x:1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+
+    })
 
     timeLine
     .from(h1Line,{

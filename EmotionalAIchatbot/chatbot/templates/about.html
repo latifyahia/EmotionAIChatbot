@@ -4,11 +4,16 @@
 <!--some code taken and customized to suit my needs from https://github.com/wrongakram/html-css-hero-animation/tree/master-->
 {% if user.is_authenticated %}
 <section class="about" >
-    <div id="bannerBg" ></div>
     <div class="container">
-        <di class="row">
+        <div class="row">
             <div class="about-inner">
                 <div class="about-content">
+                    <div class="image-inner">
+                        <img src="{% static 'img/about-image.svg' %}" />
+                    </div>
+                    <div class="image-inner-2">
+                        <img src="{% static 'img/happy-image.svg' %}" />
+                    </div>
                     <h3>
                         Here to help you overcome your emotions
                     </h3>
@@ -79,7 +84,7 @@
                     </ul>
                 </div>
             </div>
-        </di>
+        </div>
     </div>
 </section>
 
@@ -87,9 +92,15 @@
 <section class="about" >
     <div  class="banner-bg"></div>
     <div class="container">
-        <di class="row">
+        <div class="row">
             <div class="about-inner">
                 <div class="about-content">
+                    <div class="image-inner">
+                        <img src="{% static 'img/about-image.svg' %}" />
+                    </div>
+                    <div class="image-inner-2">
+                        <img src="{% static 'img/happy-image.svg' %}" />
+                    </div>
                     <h3>
                         Here to help you overcome your emotions
                     </h3>
@@ -160,7 +171,7 @@
                     </ul>
                 </div>
             </div>
-        </di>
+        </div>
     </div>
 </section>
 {% endif %}
@@ -173,7 +184,25 @@
     const aboutParagraph = document.querySelectorAll(".about-list p")
     const button = document.querySelector(".btn-row")
     const timeLine = gsap.timeline();
+    const img1 = document.querySelector(".image-inner img")
+    const img2 = document.querySelector(".image-inner-2 img")
 
+
+    gsap.from(img1, {
+        x:-1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+
+    })
+
+    gsap.from(img2, {
+        x:1000,
+        opacity:0,
+        duration: 1.5,
+        ease: "power3.out",
+
+    })
 
     timeLine
         .from(h3Content,{

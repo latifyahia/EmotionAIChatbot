@@ -1,0 +1,141 @@
+// some code taken and customized to meet my own needs from https://github.com/wrongakram/html-css-hero-animation/tree/starter
+
+@import "../variables.scss";
+
+.container-fluid {
+  height: 200px;
+  .header {
+    position: absolute;
+    width: 98%;
+    height: 100px;
+    z-index: 10;
+
+    .container-fluid {
+      .header-inner {
+        position: relative;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .logo {
+          font-family: "Playfair Display", "Poppins";
+          font-size: 2.6rem;
+          font-weight: 700;
+          color: black;
+          background: #6a34e2;
+          img{
+            height: 35px;
+            width: 35px;
+            margin-bottom: 5px;
+          }
+        }
+
+        .navigation-design {
+          position: absolute;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: center;
+
+          navv {
+            ul {
+              display: flex;
+              align-items: center;
+              padding: 0;
+
+              li {
+                list-style: none;
+                margin: 0 40px;
+
+                @media (max-width: $widescreen) {
+
+
+                  margin: 0 24px;
+                }
+
+                a {
+                  font-size: 1.2rem;
+                  padding: 8px 0;
+                  text-decoration: none;
+                  font-weight: 600;
+                  color: #6a34e2;
+                }
+              }
+            }
+          }
+        }
+
+        .nav-logins {
+          z-index: 12;
+          display: flex;
+          align-items: center;
+
+          .login {
+            a {
+              font-size: 1.2rem;
+              padding: 8px 0;
+              text-decoration: none;
+              font-weight: 600;
+              color: #6a34e2;
+              margin-right: 48px;
+              @media (max-width: $widescreen) {
+                margin-right: 24px;
+              }
+            }
+          }
+
+          .register {
+            a {
+              display: inline-block;
+              height: 52px;
+              line-height: 52px;
+              font-size: 1.2rem;
+              padding: 0 12px;
+              text-decoration: none;
+              font-weight: 600;
+              color: #6a34e2;
+              border: 2px solid $blue;
+              border-radius: 100px;
+              transition: 0.2s ease-in-out;
+
+              &:hover {
+                background: #6a34e2;
+                color: black;
+              }
+
+              @media (max-width: $widescreen) {
+                padding: 0 12px;
+              }
+            }
+          }
+          .logout {
+            a {
+              display: inline-block;
+              height: 52px;
+              line-height: 52px;
+              font-size: 1.2rem;
+              padding: 0 12px;
+              text-decoration: none;
+              font-weight: 600;
+              color: #6a34e2;
+              border: 2px solid $blue;
+              border-radius: 100px;
+              transition: 0.2s ease-in-out;
+
+              &:hover {
+                background: #6a34e2;
+                color: black;
+              }
+
+              @media (max-width: $widescreen) {
+                padding: 0 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

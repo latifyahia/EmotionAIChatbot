@@ -229,6 +229,14 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 @media (max-width: 1440px) { .banner .banner-inner .image .image-inner .feature-banner-two { right: -24px; } }
 
+.banner .banner-inner .image-inner-2 img { width: 850px; position: absolute; bottom: 15vh; left: 200px; right: -150px; margin-left: -2200px; z-index: 9; }
+
+@media (max-width: 1440px) { .banner .banner-inner .image-inner-2 img { width: 400px; } }
+
+.banner .banner-inner .image-inner-3 img { width: 850px; position: absolute; bottom: 15vh; left: 200px; right: -150px; margin-left: 600px; z-index: 9; }
+
+@media (max-width: 1440px) { .banner .banner-inner .image-inner-3 img { width: 400px; } }
+
 body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; height: 2000px; }
 
 .container { width: 1345px; min-width: 1345px; margin: 0 auto; }
@@ -249,15 +257,23 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .container-fluid .row { display: flex; align-items: center; padding: 0 16px; }
 
-.about { height: 100%; margin-top: 15vh; }
+.about { height: 50%; margin-top: 15vh; }
 
-.about .banner-bg { background: #dacfff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 2000px; background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), white 100%); }
+.about .banner-bg { background: #dacfff; position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 2000px; }
 
 .about .about-inner { display: flex; justify-content: space-between; align-items: flex-start; }
 
 .about .about-inner .about-content { width: 33%; }
 
 @media (max-width: 1440px) { .about .about-inner .about-content { width: 40%; } }
+
+.about .about-inner .about-content .image-inner img { width: 850px; position: absolute; bottom: 15vh; right: -150px; margin-right: 2750px; margin-bottom: 175px; z-index: 9; }
+
+@media (max-width: 1440px) { .about .about-inner .about-content .image-inner img { width: 400px; } }
+
+.about .about-inner .about-content .image-inner-2 img { width: 550px; position: absolute; bottom: 15vh; left: 200px; right: -150px; margin-left: 2550px; margin-right: -150px; margin-bottom: 175px; z-index: 9; }
+
+@media (max-width: 1440px) { .about .about-inner .about-content .image-inner-2 img { width: 400px; } }
 
 .about .about-inner .about-content h3 { font-family: "Playfair Display"; color: black; font-size: 3.4rem; line-height: 4.8rem; margin: 0 -175px -100px; width: 450px; left: 90px; }
 
@@ -344,6 +360,56 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 .video .error-checking p { font-size: 1rem; line-height: 1.6rem; font-weight: 300; color: black; width: 400px; margin-left: 810px; margin-top: 300px; }
 
 @media (max-width: 1440px) { .video .error-checking p { margin: 16px 0 60px; } }
+
+.profile { height: 60%; }
+
+@media (max-width: 1440px) { .profile { height: 90vh; } }
+
+.profile .profile-inner { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.profile .profile-inner .profile-content { width: 50%; }
+
+@media (max-width: 1440px) { .profile .profile-inner .profile-content { width: 40%; } }
+
+.profile .profile-inner .profile-content .profile-list { width: 50%; display: flex; justify-content: center; margin-left: -250px; }
+
+.profile .profile-inner .profile-content .profile-list ul { display: flex; justify-content: space-between; flex-wrap: wrap; padding: 0; margin-top: -15px; }
+
+.profile .profile-inner .profile-content .profile-list ul li { list-style: none; margin-bottom: 35px; }
+
+.profile .profile-inner .profile-content .profile-list ul li h3 { color: #6a34e2; font-weight: 600; font-size: 2rem; margin-bottom: 10px; margin-left: 25px; }
+
+.profile .profile-inner .profile-content .profile-list ul li h2 { color: black; font-weight: 600; font-size: 2rem; margin-bottom: -25px; margin-top: 10px; margin-left: 25px; }
+
+.profile .profile-inner .profile-content .image { position: relative; width: 40%; height: 100%; display: flex; justify-content: center; align-items: flex-end; margin-top: 325px; z-index: -1; }
+
+.profile .profile-inner .profile-content .image .image-inner img { margin-top: -475px; margin-left: 150px; width: 1400px; position: absolute; z-index: -1; }
+
+@media (max-width: 1440px) { .profile .profile-inner .profile-content .image .image-inner img { width: 400px; } }
+
+.profile .profile-inner .profile-content .image .image-inner-2 img { margin-top: -425px; margin-left: -1350px; width: 800px; position: absolute; transform: rotateY(180deg); z-index: -1; }
+
+@media (max-width: 1440px) { .profile .profile-inner .profile-content .image .image-inner-2 img { width: 400px; } }
+
+.profile .profile-inner .profile-content .profile-title-info { width: 50%; margin-top: -625px; margin-left: 720px; }
+
+.profile .profile-inner .profile-content .profile-title-info h3 { font-family: "Playfair Display"; color: black; font-size: 3.4rem; line-height: 4.8rem; margin: 0 0 -100px; width: 550px; }
+
+.profile .profile-inner .profile-content .profile-title-info h3 .line { overflow: hidden; height: 70px; position: relative; }
+
+.profile .profile-inner .profile-content .profile-title-info h3 .line span { position: absolute; }
+
+@media (max-width: 1440px) { .profile .profile-inner .profile-content .profile-title-info h3 .line span { font-size: 3.1rem; line-height: 3.6rem; } }
+
+.profile .profile-inner .profile-info { width: 500px; height: 700px; margin-top: 50px; }
+
+.profile .profile-inner .profile-info h3 { font-family: "Playfair Display"; color: black; font-size: 3.4rem; line-height: 4.8rem; margin-left: -1700px; margin-top: 450px; width: 550px; }
+
+.profile .profile-inner .profile-info h3 .line-2 { overflow: hidden; height: 70px; position: relative; }
+
+.profile .profile-inner .profile-info h3 .line-2 span { position: absolute; }
+
+@media (max-width: 1440px) { .profile .profile-inner .profile-info h3 .line-2 span { font-size: 3.1rem; line-height: 3.6rem; } }
 
 body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; height: 2000px; }
 

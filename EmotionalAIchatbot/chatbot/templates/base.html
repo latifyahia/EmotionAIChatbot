@@ -26,10 +26,11 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Poppins:300,600&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{% sass_src 'css/style.scss' %}" />
 
+    <style> body  {opacity:0;}</style>
 </head>
 <body style="background-color: #dacfff;     background-image: linear-gradient(to top, rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),
             rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),rgba(255,255,255,0),
-            rgba(255,255,255,0),rgba(255,255,255,0), rgba(255,255,255,0),rgba(255,255,255, 1) 100%); ">
+            rgba(255,255,255,0),rgba(255,255,255,0), rgba(255,255,255,0),rgba(255,255,255, 1) 100%); " >
 {% if user.is_authenticated %}
 
 <!--some code taken and customized to suit my needs from https://github.com/wrongakram/html-css-hero-animation/tree/master-->
@@ -97,6 +98,9 @@
 </div>
 
 {% endif %}
+<script>
+    window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},100);};
+</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js"></script>
 
 <!--animation of content on page-->

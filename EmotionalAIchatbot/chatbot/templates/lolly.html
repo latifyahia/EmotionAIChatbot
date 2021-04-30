@@ -35,7 +35,7 @@
 <!--code taken and customized to meet my own needs from https://github.com/JiteshGaikwad/Chatbot-Widget-->
 <section class="video" >
     <div class="container">
-        <di class="row">
+        <div class="row">
             <div class="video-inner">
                 <div class="video-content">
                     <h3>
@@ -94,7 +94,7 @@
                     the webcam. Please adjust your positioning or webcam.
                 </p>
             </div>
-        </di>
+        </div>
     </div>
 </section>
 <div class="container-fluid">
@@ -152,7 +152,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script>
 
-    const emotionList = [document.querySelectorAll(".emotion-list ul li")];
+    const emotionList = document.querySelectorAll(".emotion-list ul li");
     const h1Line = document.querySelectorAll(".line span")
     const videoCam = document.querySelectorAll(".video-frame video")
     const videoBackground = document.querySelectorAll(".video-frame div")
@@ -198,6 +198,7 @@
         x:65,
         opacity:0,
         duration: 0.8,
+        ease: "power3.out",
         stagger:{
             amount: 0.6
         }
