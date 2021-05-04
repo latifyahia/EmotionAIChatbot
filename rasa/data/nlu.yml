@@ -16,6 +16,18 @@ nlu:
     - goodevening
     - good afternoon
     - Hey
+    - greetings
+    - howdy
+    - welcome
+    - bonjour
+    - buenas noches
+    - buenos dias
+    - good day
+    - hi-ya
+    - howdy-do
+    - shalom
+    - what's happening
+    - what's up
 - intent: goodbye
   examples: |
     - cu
@@ -28,14 +40,51 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - adieu
+    - bye-bye
+    - Godspeed
+    - adios
+    - cheerio
+    - ciao
+    - leave-taking
+    - parting
+    - so long
+    - swan song
+    - toodle-oo
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
+    - affirmative
+    - amen
+    - fine
+    - good
+    - okay
+    - true
+    - yea
+    - all right
+    - aye
+    - beyond a doubt
+    - by all means
+    - certainly
+    - definitely
+    - even so
+    - exactly
+    - gladly
+    - good enough
+    - granted
+    - indubitably
+    - just so
+    - most assuredly
+    - naturally
     - of course
-    - that sounds good
-    - correct
+    - positively
+    - precisely
+    - sure thing
+    - surely
+    - undoubtedly
+    - unquestionably
+    - very well
+    - willingly
+    - without fail
 - intent: deny
   examples: |
     - no
@@ -45,63 +94,326 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nay
+    - nix
+    - not
+    - i am not
 - intent: my_name
   examples: |
     - my name is [latif](name)
     - [latif](name) is my name
     - i go by the name of [latif](name)
-    - my name is [latif](name)
+- intent: mood_neutral
+  examples: |
+    - neutral
+    - disinterested
+    - evenhanded
+    - fair-minded
+    - inactive
+    - indifferent
+    - nonaligned
+    - nonpartisan
+    - unbiased
+    - uncommitted
+    - undecided
+    - uninvolved
+    - pretty calm
+    - calm
+    - cool
+    - noncombatant
+    - aloof
+    - bystanding
+    - clinical
+    - collected
+    - detached
+    - disengaged
+    - dispassionate
+    - easy
+    - impersonal
+    - inert
+    - middle-of-road
+    - nonbelligerent
+    - nonchalant
+    - nonparticipating
+    - on sidelines
+    - on the fence
+    - pacifistic
+    - poker-faced
 - intent: mood_happy
   examples: |
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - im feeling very good
-    - im feeling good
-    - im feeling good thanks
-- intent: mood_unhappy
+    - happy
+    - very happy
+    - feeling happy
+    - feeling great
+    - cheerful
+    - contented
+    - delighted
+    - ecstatic
+    - elated
+    - glad
+    - joyful
+    - joyous
+    - jubilant
+    - lively
+    - merry
+    - overjoyed
+    - peaceful
+    - pleasant
+    - pleased
+    - thrilled
+    - upbeat
+    - blessed
+    - blest
+    - blissful
+    - blithe
+    - can't complain
+    - captivated
+    - chipper
+    - chirpy
+    - content
+    - convivial
+    - exultant
+    - flying high
+    - gay
+    - gleeful
+    - gratified
+    - intoxicated
+    - jolly
+    - laughing
+    - light
+    - looking good
+    - mirthful
+    - on cloud nine
+    - peppy
+- intent: mood_sad
   examples: |
-    - I'm so sad
-    - very sad
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - im unhappy
-    - im not good
-    - im very sad
+    - upset
+    - pretty upset
+    - pretty sad
+    - i am sad
+    - im pretty upset
+    - im feeling upset
+    - im feeling sad
+    - dismal
+    - heartbroken
+    - melancholy
+    - mournful
+    - pessimistic
+    - somber
+    - sorrowful
+    - sorry
+    - wistful
+    - bereaved
+    - blue
+    - cheerless
+    - dejected
+    - despairing
+    - despondent
+    - disconsolate
+    - distressed
+    - doleful
+    - down
+    - down in dumps
+    - down in mouth
+    - downcast
+    - forlorn
+    - gloomy
+    - glum
+    - grief-stricken
+    - grieved
+    - heartsick
+    - heavyhearted
+    - hurting
+    - in doldrums
+    - in grief
+    - in the dumps
+    - languishing
+    - low
+    - low-spirited
+    - lugubrious
+    - morbid
+    - morose
+    - im feeling abit sad
+- intent: mood_angry
+  examples: |
+    - im angry
+    - angry
+    - feeling angry
+    - pretty angry
+    - bitter
+    - enraged
+    - exasperated
+    - furious
+    - heated
+    - impassioned
+    - annoyed
+    - indignant
+    - irate
+    - irritable
+    - irritated
+    - offended
+    - outraged
+    - resentful
+    - sullen
+    - uptight
+    - affronted
+    - antagonized
+    - chafed
+    - choleric
+    - convulsed
+    - cross
+    - displeased
+    - exacerbated
+    - ferocious
+    - fierce
+    - fiery
+    - fuming
+    - galled
+    - hateful
+    - hot
+    - huffy
+    - ill-tempered
+    - incensed
+    - inflamed
+    - infuriated
+    - irascible
+    - ireful
+    - maddened
+    - nettled
+    - piqued
+    - provoked
+    - raging
+    - riled
+- intent: mood_surprised
+  examples: |
+    - im surpised
+    - surpried
+    - astonished
+    - bewildered
+    - dazed
+    - frightened
+    - shocked
+    - startled
+    - stunned
+    - alarmed
+    - astounded
+- intent: mood_fearful
+  examples: |
+    - fearful
+    - scared
+    - feel haunted
+    - afraid
+    - anxious
+    - panicked
+    - panicky
+    - startled
+    - petrified
+    - shaken
+    - terrified
+    - aghast
+    - having cold feet
+    - panic-stricken
+- intent: mood_disgusted
+  examples: |
+    - disgusted
+    - feeling very disgusted
+    - appalled
+    - outraged
+    - queasy
+    - tired
+    - unhappy
+    - weary
+    - abhorred
+    - displeased
+    - nauseated
+    - repelled
+    - repulsed
+    - revolted
+    - satiated
+    - scandalized
+    - sick
+    - fastidious
+    - fed up
+    - full up
+    - grossed out
+    - had bellyful
+    - had enough
+    - had it
+    - nauseous
+    - overwrought
+    - sick and tired of
+    - sick of
+    - squeamish
+    - teed off
+    - turned off
+    - up to here
+- intent: mood_happy_reason
+  examples: |
+    - just graduated from college
+    - its my birthday
+    - had a good day at work
+    - finished a project
+    - its my anniversary
+    - finished a project that i was working on
+    - going on vacation soon
+    - lockdown is ending soon
+    - passed my exam
+- intent: mood_sad_reason
+  examples: |
+    - didnt graduated from college
+    - had a bad day at work
+    - didnt finish a project
+    - had a good day at work
+    - forgot about my anniversary
+    - didnt finished a project
+    - not going on vacation soon
+    - lockdown is not ending soon
+    - failed my exam
+    - death in the family
+    - stuck in lockdown
+    - brokeup with my partner
+    - lost my wallet
+    - lost a family member to corona virus
+    - im feeling sad because i failed an exam
+- intent: mood_angry_reason
+  examples: |
+    - had a fight with
+    - fough with
+    - cant leave the house
+    - stuck at home
+    - angry at myself
+    - angry at someone
+    - screamed at me
+    - i screamed at
+- intent: mood_fearful_reason
+  examples: |
+    - scared of corona virus
+    - scared of dying
+    - watched a scary movie
+    - im scared to fail
+- intent: mood_disgusted_reason
+  examples: |
+    - digusted of the way he spoke to me
+    - digusted of the way she spoke to me
+    - scared of dying
+    - watched a scary movie
+    - im scared to fail
+- intent: cute_animal_picture
+  examples: |
+    - Cute photo of an animal
+- intent: funny_joke
+  examples: |
+    - Funny Joke
+- intent: funny_movie
+  examples: |
+    - Funny Movie
+- intent: mood_neutral_reason
+  examples: |
+    - havnet been very emotional lately
+    - forgot how to be happy or sad
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-#- intent: day_info_celebrations
-#  examples: |
-#    - [birthday](celebration)
-#    - [celebration] {"entity":"celebration","value":"celebration"}
-#    - [party] {"entity":"celebration","value":"party"}
-#    - [wedding] {"entity":"celebration","value":"wedding"}
-#    - [christmas] {"entity":"celebration","value":"christmas"}
-#    - [easter] {"entity":"celebration","value":"easter"}
-#    - [weekend] {"entity":"celebration","value":"weekend"}
-#    - [nightclub] {"entity":"celebration","value":"nightclub"}
-#    - [graduation] {"entity":"celebration","value":"graduation"}
-#    - [festival] {"entity":"celebration","value":"festival"}
-#    - my day has been very good, i went to a party today

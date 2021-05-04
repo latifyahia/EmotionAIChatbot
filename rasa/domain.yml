@@ -3,15 +3,29 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- funny_movie
+- mood_sad_reason
+- mood_sad
+- funny_joke
 - my_name
 - greet
-- mood_happy
 - affirm
 - goodbye
 - deny
-- mood_unhappy
+- mood_happy
+- mood_surprised
+- mood_fearful
+- mood_disgusted
+- mood_angry
+- mood_neutral
+- mood_neutral_reason
+- mood_happy_reason
+- mood_angry_reason
+- mood_fearful_reason
+- mood_disgusted_reason
+- mood_surprised_reason
+- cute_animal_picture
 - bot_challenge
-
 entities:
 - name
 slots:
@@ -20,24 +34,114 @@ slots:
     influence_conversation: true
   emotion:
     type: categorical
-    values:
-      - Happy
-      - Sad
-      - Neutral
     influence_conversation: true
+    values:
+    - happy
+    - sad
+    - neutral
+    - disgusted
+    - fearful
+    - angry
+    - surprised
+    - __other__
+  requested_slot:
+    type: text
+    influence_conversation: false
 responses:
   utter_greet_neutral:
   - text: Hey there! May i have your name?
   utter_greet_happy:
-  - text: Hey there smiley! that smile looks great on you. May i have your name?
+  - text: Hey! that smile looks great on you. May i have your name?
   utter_greet_sad:
-  - text: Hey, cheer up there! i bet a smile would lookg good on you. May i have your name please?
+  - text: Hey, cheer up there! i bet a smile would look good on you. May i have your name please?
+  utter_greet_angry:
+  - text: Hey there, take it easy! i can see youre angry. Let talks about why youre angry, but first may i have your name please?
+  utter_greet_surprised:
+  - text: Hey, you look very surprised. May i have your name please?
+  utter_greet_fearful:
+  - text: Hey, you look scared. I hope im not scaring you. May i have your name please?
+  utter_greet_disgusted:
+  - text: Hey, you look digusted. Im curious to know why, but first may i have your name please?
   utter_reply_name_neutral:
-  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. How are you today?
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. How are you feeling today?
   utter_reply_name_happy:
-  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. No need to ask how you are doing i can tell your happy today!
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. No need to ask how you are doing i can tell your happy today! Feel free to tell me why.
   utter_reply_name_sad:
-  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that your sad.
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that your sad. Lets change that, tell me whats going on.
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I see that you're sad. Please allow me to change that. If i may ask, why are you sad?.
+  utter_reply_name_angry:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that you're angry. Lets change that, tell me whats going on.
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I see that you're angry. Please allow me to change that. If i may ask, whats going on?.
+  utter_reply_name_fearful:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that you're scared. Im hoping i can change that, tell me whats going on.
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I see that you're scared. Please allow me to change that. If i may ask, whats going on?.
+  utter_reply_name_disgusted:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that you're disgusted. Im hoping i can change that, tell me whats going on.
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I see that you're disgusted about something. Please allow me to change that. If i may ask, whats going on?.
+  utter_reply_name_surprised:
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I can see that you're surprised. Im hoping i can change that, tell me whats going on.
+  - text: Thank you {name}, i'm Lolly your emotional AI chatbot. I see that you're surpised about something. If i may ask, what are you surprised about?.
+  utter_reply_neutral:
+  - text: Nothing wrong with feeling neutral. Im here to make you happy. Let me do that. What makes you happy?
+  utter_reply_happy:
+  - text: Thanks for letting me know that youre happy! Feel free to tell me why.
+  - text: Thats great to hear. So, why are you happy?
+  - text: Thats fantastic! How come you're happy?
+  utter_reply_sad:
+  - text: No need to be sad. I'll help you cheer up. Why exactly are you sad?
+  - text: Please allow me to change that. If i may ask, why are you sad?.
+  utter_reply_angry:
+  - text: Lets change that, tell me whats going on.
+  - text: Please allow me to change that. If i may ask, whats going on?.
+  utter_reply_fearful:
+  - text: Im hoping i can change that, tell me whats going on.
+  - text: Please allow me to change that. If i may ask, whats going on?.
+  utter_reply_disgusted:
+  - text: Im hoping i can change that, tell me whats going on.
+  - text: Please allow me to change that. If i may ask, whats going on?.
+  utter_reply_surprised:
+  - text: Im hoping i can change that, tell me whats going on.
+  - text: If i may ask, what are you surprised about?.
+  utter_sad_reason:
+  - text: I understand. Its completely fine to be sad. Everyone feels sad at time. You have to remember to look on the bright said. Let me help cheer you up.
+  utter_angry_reason:
+  - text: I understand. Its completely normal to be angry. The important thing is to control that angry. Allow me to cheer you up abit.
+  utter_disgusted_reason:
+  - text: I understand. Its completely normal to be disgusted. Allow me to cheer you up abit.
+  utter_fearful_reason:
+  - text: I understand. Its completely normal to be scared. It shows that youre human. Im going to take your mind off being scared and try cheer you up abit.
+  utter_neutral_reason:
+  - text: I understand. Its completely normal not to be emotional but sometimes its good be feel happy. I will try my best to make you happy and smile abit.
+  utter_happy_reason:
+  - text: Thats great. Im glad you are happy. My goal is to make people happy but since youre already happy, ill only try to make you happier!
+  utter_surprised_reason:
+  - text: I understand the feeling of being surprised and it is a weird one. People react to being surprised differently. Im hoping your surpise was a positive one, and if it wasn't im hear to take your mind off of things and try to cheer you up.
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_cheering_up_1:
+  - text: Which one of the items below would cheer you up and help take your mind off things?
+    buttons:
+    - title: Cute Picture of an animal
+      payload: /cute_animal_picture
+    - title: Funny Movie
+      payload: /funny_movie
+    - title: Funny Joke
+      payload: /funny_joke
+  utter_funny_movie:
+  - text: Heres a list of five movies that will cheer you up! [1] ACE VENTURA - PET DETECTIVE, [2] BRIDESMAIDS, [3] DUMB AND DUMBER, [4] ELF, [5] THE HANGOVER.
+  utter_cute_animal_picture:
+  - text: Here is a cute gif of an animal. Hope this cheers you up!
+    image: https://media.giphy.com/media/eaeE9qEHKUZX2/giphy.gif
+  - text: Here is a cute gif of an animal. Hope this cheers you up!
+    image: https://media.giphy.com/media/vJRMuf14ygIec/giphy.gif
+  - text: Here is a cute gif of an animal. Hope this cheers you up!
+    image: https://media.giphy.com/media/QFgGO4Yr52R9u/giphy.gif
+  - text: Here is a cute gif of an animal. Hope this cheers you up!
+    image: https://media.giphy.com/media/f2HiQKaEkaKwo/giphy.gif
+  - text: Here is a cute gif of an animal. Hope this cheers you up!
+    image: https://media.giphy.com/media/GIFbrFpayHUwo/giphy.gif
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -54,18 +158,46 @@ responses:
   utter_day_response_happy:
   - text: Thats great to hear, It seems like you had fun at the {celebration}
 actions:
+- action_default_fallback
+- action_random_joke
 - action_submit_emotion
+- action_submit_emotion_reset
 - action_submit_name
+- utter_angry_reason
+- utter_cheering_up_1
+- utter_cute_animal_picture
+- utter_default
+- utter_disgusted_reason
+- utter_fearful_reason
+- utter_funny_movie
+- utter_greet_angry
+- utter_greet_disgusted
+- utter_greet_fearful
 - utter_greet_happy
 - utter_greet_neutral
 - utter_greet_sad
+- utter_greet_surprised
+- utter_happy_reason
+- utter_neutral_reason
+- utter_please_rephrase
+- utter_reply_angry
+- utter_reply_disgusted
+- utter_reply_fearful
+- utter_reply_happy
+- utter_reply_name_angry
+- utter_reply_name_disgusted
+- utter_reply_name_fearful
 - utter_reply_name_happy
 - utter_reply_name_neutral
 - utter_reply_name_sad
-- action_submit_emotion_reset
+- utter_reply_name_surprised
+- utter_reply_neutral
+- utter_reply_sad
+- utter_reply_surprised
+- utter_sad_reason
+- utter_surprised_reason
 forms:
   name_form:
     name:
     - type: from_entity
       entity: name
-

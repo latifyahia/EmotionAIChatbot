@@ -34,13 +34,13 @@
         <div class="col-4">
         </div>
         <div class="col-4">
-            <div class="center">
+            <div style="justify-content: center; margin-top: -70px" class="center">
                 <h3>Registration</h3>
                 <form style="justify-content: center;" method="POST" class="form-group">
                     {% csrf_token %}
                     {{form | crispy}}
 
-                    <button style="background-color: #6a34e2; border-color: #6a34e2;" type="submit" class="btn btn-success">Register</button>
+                    <button style="background-color: #6a34e2; border-color: #6a34e2; margin-top: 25px" type="submit" class="btn btn-success">Register</button>
                 </form>
             </div>.
         </div>

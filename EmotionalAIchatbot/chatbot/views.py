@@ -47,9 +47,29 @@ def profile(request):
         'fearful': 0,
         'surprised': 0,
         'disgusted': 0,
+        'userName': '',
+        'firstName': '',
+        'lastName':'',
+        'emailAddress':'',
+        'dateJoined': '',
+        'lastLogin': '',
     }
     current_user = request.user
     userData = UserData.objects.all()
+    userEmotions['userName'] = str(current_user.username)
+    userEmotions['firstName'] = str(current_user.first_name)
+    userEmotions['lastName'] = str(current_user.last_name)
+    userEmotions['emailAddress'] = str(current_user.email)
+    dateJoined = str(current_user.date_joined)
+    lastLogin = str(current_user.last_login)
+
+    dateJoinedParsed = dateJoined[0:10]
+    lastLoginParsed = lastLogin[0:10]
+
+    userEmotions['dateJoined'] = dateJoinedParsed
+    userEmotions['lastLogin'] = lastLoginParsed
+
+    print(userEmotions['userName'])
 
     for data in userData:
         emotion = data

@@ -43,4 +43,178 @@ stories:
     - name: latif
   - action: utter_reply_name_sad
 
+- story: greet_name_angry
+  steps:
+    - intent: greet
+    - action: action_submit_emotion
+    - slot_was_set:
+        - emotion: Angry
+    - action: utter_greet_angry
+    - intent: my_name
+      entities:
+        - name: latif
+    - slot_was_set:
+        - name: latif
+    - action: utter_reply_name_angry
 
+- story: greet_name_fearful
+  steps:
+    - intent: greet
+    - action: action_submit_emotion
+    - slot_was_set:
+        - emotion: Fearful
+    - action: utter_greet_fearful
+    - intent: my_name
+      entities:
+        - name: latif
+    - slot_was_set:
+        - name: latif
+    - action: utter_reply_name_fearful
+
+- story: greet_name_surprised
+  steps:
+    - intent: greet
+    - action: action_submit_emotion
+    - slot_was_set:
+        - emotion: Surprised
+    - action: utter_greet_surprised
+    - intent: my_name
+      entities:
+        - name: latif
+    - slot_was_set:
+        - name: latif
+    - action: utter_reply_name_surprised
+
+- story: greet_name_disgusted
+  steps:
+    - intent: greet
+    - action: action_submit_emotion
+    - slot_was_set:
+        - emotion: Disgusted
+    - action: utter_greet_disgusted
+    - intent: my_name
+      entities:
+        - name: latif
+    - slot_was_set:
+        - name: latif
+    - action: utter_reply_name_disgusted
+
+- story: neutral
+  steps:
+    - intent: mood_neutral
+    - action: utter_reply_neutral
+
+- story: happy
+  steps:
+    - intent: mood_happy
+    - action: utter_reply_happy
+
+- story: sad
+  steps:
+    - intent: mood_sad
+    - action: utter_reply_sad
+
+- story: angry
+  steps:
+    - intent: mood_angry
+    - action: utter_reply_angry
+
+- story: surprised
+  steps:
+    - intent: mood_surprised
+    - action: utter_reply_surprised
+
+- story: fearful
+  steps:
+    - intent: mood_fearful
+    - action: utter_reply_fearful
+
+- story: disgusted
+  steps:
+    - intent: mood_disgusted
+    - action: utter_reply_disgusted
+
+- story: inform/reason_happy
+  steps:
+    - intent: mood_happy_reason
+    - action: utter_happy_reason
+    - action: utter_cheering_up_1
+
+
+- story: inform/reason_sad
+  steps:
+  - intent: mood_sad_reason
+  - action: utter_sad_reason
+  - action: utter_cheering_up_1
+
+- story: inform/reason_angry
+  steps:
+    - intent: mood_angry_reason
+    - action: utter_angry_reason
+    - action: utter_cheering_up_1
+
+- story: inform/reason_neutral
+  steps:
+    - intent: mood_neutral_reason
+    - action: utter_neutral_reason
+    - action: utter_cheering_up_1
+
+- story: inform/reason_fearful
+  steps:
+    - intent: mood_fearful_reason
+    - action: utter_fearful_reason
+    - action: utter_cheering_up_1
+
+- story: inform/reason_disgusted
+  steps:
+    - intent: mood_disgusted_reason
+    - action: utter_disgusted_reason
+    - action: utter_cheering_up_1
+
+- story: inform/reason_surprised
+  steps:
+    - intent: mood_surprised_reason
+    - action: utter_surprised_reason
+    - action: utter_cheering_up_1
+
+
+- story: funny_movie
+  steps:
+    - intent: funny_movie
+    - action: utter_funny_movie
+
+- story: cute_animal_gif
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+
+- story: funny_joke
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: mood_sad
+#  - action: utter_reply_sad
+#  - action: utter_cheering_up_1
+#  - intent: funny_joke
+#  - action: action_random_joke
+#
+#- story: interactive_story_2
+#  steps:
+#  - intent: mood_sad
+#  - action: utter_reply_sad
+#  - action: utter_cheering_up_1
+#  - intent: funny_joke
+#  - action: action_random_joke
+
+#- story: interactive_story_1
+#  steps:
+#  - intent: mood_sad
+#  - action: utter_reply_sad
+#  - intent: mood_sad_reason
+#  - action: utter_sad_reason
+#  - action: utter_cheering_up_1
+#  - intent: funny_movie
+#  - action: utter_funny_movie

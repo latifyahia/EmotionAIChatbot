@@ -86,3 +86,17 @@ class ActionEmotionSubmit(Action):
             emotion = jsonData[0]['currentEmotion']
             return [SlotSet("emotion", emotion)]
 
+class ActionRandom(Action):
+    def name(self):
+        # define the name of the action which can then be included in training stories
+        return "action_random_joke"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            request = json.loads(requests.get("http://api.icndb.com/jokes/random").text)
+            joke = request["value"][
+                "joke"
+            ]  # extract a joke from returned json response
+            dispatcher.utter_message(joke)  # send the message back to the user
+            return []

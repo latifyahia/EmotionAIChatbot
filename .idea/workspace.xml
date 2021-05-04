@@ -24,7 +24,17 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIChatbot/chatbot/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/EmotionAIChatbot/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotionData.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/nlu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/rules.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/stories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/domain.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/story_graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/story_graph.dot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,17 +113,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="quickstart-script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,7 +253,11 @@
       <workItem from="1619695891690" duration="21500000" />
       <workItem from="1619730047799" duration="28137000" />
       <workItem from="1619790248893" duration="716000" />
-      <workItem from="1619811791902" duration="6088000" />
+      <workItem from="1619811791902" duration="6769000" />
+      <workItem from="1619819200965" duration="5000" />
+      <workItem from="1619819568658" duration="14000" />
+      <workItem from="1619998096847" duration="47000" />
+      <workItem from="1620061160519" duration="23768000" />
     </task>
     <servers />
   </component>
@@ -274,10 +277,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619489036159">
+    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620072287734">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619489036159" />
+    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1620072287734" />
     <state x="1500" y="454" key="FileChooserDialogImpl" timestamp="1619486479568">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -323,6 +326,17 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1383" y="315" width="672" height="678" key="search.everywhere.popup/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1619486868460" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/EmotionalAIChatbot/chatbot/views.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
