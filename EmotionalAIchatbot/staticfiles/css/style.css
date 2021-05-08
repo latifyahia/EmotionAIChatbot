@@ -289,11 +289,11 @@ body { font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 .about .about-inner .about-list ul li { list-style: none; }
 
-.about .about-inner .about-list ul li img { margin-bottom: 24px; margin-left: -10px; width: 60px; height: 60px; }
+.about .about-inner .about-list ul li img { margin-bottom: 24px; margin-left: -10px; margin-top: 15px; width: 60px; height: 60px; }
 
 .about .about-inner .about-list ul li h5 { color: #6a34e2; font-weight: 600; font-size: 1.2rem; margin: 0; }
 
-.about .about-inner .about-list ul li p { line-height: 1.8rem; font-weight: 300; color: black; width: 270px; margin: 16px 0 72px; font-size: 1rem; }
+.about .about-inner .about-list ul li p { line-height: 1.8rem; font-weight: 300; color: black; width: 270px; margin: 16px 0 -15px; font-size: 1rem; }
 
 @media (max-width: 1440px) { .about .about-inner .about-list ul li p { font-size: 0.875rem; } }
 

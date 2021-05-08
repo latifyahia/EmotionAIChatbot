@@ -86,6 +86,8 @@ class ActionEmotionSubmit(Action):
             emotion = jsonData[0]['currentEmotion']
             return [SlotSet("emotion", emotion)]
 
+
+## Action for joke taken from https://github.com/rgstephens/jokebot/blob/master/actions/actions.py
 class ActionRandom(Action):
     def name(self):
         # define the name of the action which can then be included in training stories
