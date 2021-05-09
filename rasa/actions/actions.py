@@ -6,6 +6,8 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
+import time
+from asyncio import BaseEventLoop
 from urllib import request
 
 from azure.cognitiveservices.vision.face import FaceClient
@@ -101,4 +103,22 @@ class ActionRandom(Action):
                 "joke"
             ]  # extract a joke from returned json response
             dispatcher.utter_message(joke)  # send the message back to the user
+            return []
+
+class ActionCheckEmotion(Action):
+    def name(self) -> Text:
+        return "action_check_emotion"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            r = requests.get('http://localhost:3000/emotion')
+            jsonData = r.json()
+            emotion = jsonData[0]['currentEmotion']
+            if (emotion=='Happy'):
+                dispatcher.utter_message(text="I can see you're feeling better now! Looks like im doing my job")
+
+            else:
+                dispatcher.utter_message(text="Did that help you?")
+
             return []

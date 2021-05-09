@@ -178,20 +178,311 @@ stories:
     - action: utter_cheering_up_1
 
 
-- story: funny_movie
+- story: funny_movie_helped
   steps:
     - intent: funny_movie
     - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
 
-- story: cute_animal_gif
+- story: cute_animal_gif_helped
   steps:
     - intent: cute_animal_picture
     - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
 
-- story: funny_joke
+- story: funny_joke_helped
   steps:
     - intent: funny_joke
     - action: action_random_joke
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: path1
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: path2
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: path3
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_movie
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path4
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_movie
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path5
+  steps:
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_joke
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: path6
+  steps:
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_joke
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: path7
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path8
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path9
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_movie
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path10
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_movie
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path11
+  steps:
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_joke
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: path12
+  steps:
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_joke
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: path13
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: affirm
+    - action: utter_whatelse_can_i_do
+
+
+- story: path14
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: affirm
+    - action: utter_whatelse_can_i_do
+
+
+- story: path15
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_movie
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: affirm
+    - action: utter_whatelse_can_i_do
+
+- story: path16
+  steps:
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_picture_movie
+    - intent: funny_movie
+    - action: utter_funny_movie
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_other_resources
+    - action: utter_other_resources_articals
+    - action: utter_anything_else
+    - intent: affirm
+    - action: utter_whatelse_can_i_do
+
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
 
 #- story: interactive_story_1
 #  steps:
@@ -218,3 +509,38 @@ stories:
 #  - action: utter_cheering_up_1
 #  - intent: funny_movie
 #  - action: utter_funny_movie
+
+
+
+- story: interactive_story_1
+  steps:
+  - intent: cute_animal_picture
+  - action: utter_cute_animal_picture
+  - action: action_check_emotion
+  - intent: deny
+  - action: utter_try_again_movie_joke
+  - intent: funny_joke
+  - action: action_random_joke
+  - action: action_check_emotion
+  - intent: affirm
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: cute_animal_gif_not_helped_funny_joke_yes
+  steps:
+    - intent: cute_animal_picture
+    - action: utter_cute_animal_picture
+    - action: action_check_emotion
+    - intent: deny
+    - action: utter_try_again_movie_joke
+    - intent: funny_joke
+    - action: action_random_joke
+    - action: action_check_emotion
+    - intent: affirm
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+

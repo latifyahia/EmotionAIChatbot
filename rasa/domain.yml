@@ -3,15 +3,17 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- funny_movie
+- greet
+- my_name
 - mood_sad_reason
 - mood_sad
-- funny_joke
-- my_name
-- greet
+- cute_animal_picture
 - affirm
-- goodbye
 - deny
+- funny_joke
+- nlu_fallback
+- goodbye
+- funny_movie
 - mood_happy
 - mood_surprised
 - mood_fearful
@@ -24,8 +26,8 @@ intents:
 - mood_fearful_reason
 - mood_disgusted_reason
 - mood_surprised_reason
-- cute_animal_picture
 - bot_challenge
+- thanks
 entities:
 - name
 slots:
@@ -142,34 +144,83 @@ responses:
     image: https://media.giphy.com/media/GIFbrFpayHUwo/giphy.gif
   utter_default:
   - text: Sorry I didn't get that. Can you rephrase?
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
   - text: Did that help you?
+  utter_anything_else:
+  - text: Great! is there anything else you would like to talk about?
+  - text: Im happy to hear. Is there anything else on your mind?
+  utter_try_again_movie_joke:
+  - text: Hmm.. It seems like i could of done better. Let me try again. Which one of these items would help you cheer up?
+    buttons:
+    - title: Funny Movie
+      payload: /funny_movie
+    - title: Funny Joke
+      payload: /funny_joke
+  - text: Sorry to hear that. I will try again. Which one of these items would help you cheer up?
+    buttons:
+    - title: Funny Movie
+      payload: /funny_movie
+    - title: Funny Joke
+      payload: /funny_joke
+  utter_try_again_picture_joke:
+  - text: Hmm.. It seems like i could of done better. Let me try again. Which one of these items would help you cheer up?
+    buttons:
+    - title: Cute Picture of an animal
+      payload: /cute_animal_picture
+    - title: Funny Joke
+      payload: /funny_joke
+  - text: Sorry to hear that. I will try again. Which one of these items would help you cheer up?
+    buttons:
+    - title: Cute Picture of an animal
+      payload: /cute_animal_picture
+    - title: Funny Joke
+      payload: /funny_joke
+  utter_try_again_picture_movie:
+  - text: Hmm.. It seems like i could of done better. Let me try again. Which one of these items would help you cheer up?
+    buttons:
+    - title: Cute Picture of an animal
+      payload: /cute_animal_picture
+    - title: Funny Movie
+      payload: /funny_movie
+  - text: Sorry to hear that. I will try again. Which one of these items would help you cheer up?
+    buttons:
+    - title: Cute Picture of an animal
+      payload: /cute_animal_picture
+    - title: Funny Movie
+      payload: /funny_movie
+  utter_other_resources:
+  - text: Sorry i couldnt help cheer you up! Im not giving up just yet tho. Here are some articals relating to how you cna cheer yourself up!
+  utter_other_resources_articals:
+  - text: Here are 15 ways to cheer yourself up. [Please Click Here](https://www.goodnet.org/articles/15-little-ways-to-cheer-yourself-up)
+  - text: Here are 30 small things you can do to cheer yourself up. [Please Click Here](https://themighty.com/2018/01/coping-strategies-for-depression/)
   utter_happy:
   - text: Great, tell me about your day!
   utter_unhappy:
   - text: I understand, everyone has these types of days. If you dont mind, tell me about your day!
   utter_goodbye:
-  - text: Bye
+  - text: Okay bye!
+  - text: Bye! It was nice talking to you.
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_day_response_happy:
-  - text: Thats great to hear, It seems like you had fun at the {celebration}
+  utter_whatelse_can_i_do:
+  - text: No problem, What else can i help you with?
+  - text: No worries! How else can i help?
 actions:
-- action_default_fallback
+- action_check_emotion
 - action_random_joke
 - action_submit_emotion
 - action_submit_emotion_reset
 - action_submit_name
 - utter_angry_reason
+- utter_anything_else
 - utter_cheering_up_1
 - utter_cute_animal_picture
 - utter_default
+- utter_did_that_help
 - utter_disgusted_reason
 - utter_fearful_reason
 - utter_funny_movie
+- utter_goodbye
 - utter_greet_angry
 - utter_greet_disgusted
 - utter_greet_fearful
@@ -179,6 +230,8 @@ actions:
 - utter_greet_surprised
 - utter_happy_reason
 - utter_neutral_reason
+- utter_other_resources
+- utter_other_resources_articals
 - utter_please_rephrase
 - utter_reply_angry
 - utter_reply_disgusted
@@ -196,6 +249,10 @@ actions:
 - utter_reply_surprised
 - utter_sad_reason
 - utter_surprised_reason
+- utter_try_again_movie_joke
+- utter_try_again_picture_joke
+- utter_try_again_picture_movie
+- utter_whatelse_can_i_do
 forms:
   name_form:
     name:

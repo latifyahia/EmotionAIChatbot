@@ -85,6 +85,8 @@ nlu:
     - very well
     - willingly
     - without fail
+    - yes it did
+    - yes
 - intent: deny
   examples: |
     - no
@@ -98,11 +100,33 @@ nlu:
     - nix
     - not
     - i am not
+    - thank you thats all
+    - thats perfects thanks
+    - no thats all
+    - thats great thanks
+    - thank you
+    - im very thankful
+    - thats amazing thanks
+    - fantasic thank you
+    - no thats it
+    - no thats all thanks
+    - no thanks
+    - no it didnt cheer me up
+    - no it didnt
+    - not at all
+    - no way
+    - no
+    - not a chance
+    - it didnt not help me
+    - it didnt help me
+    - didnt help me
 - intent: my_name
   examples: |
     - my name is [latif](name)
     - [latif](name) is my name
     - i go by the name of [latif](name)
+    - [latif](name)
+    - [latif](name)
 - intent: mood_neutral
   examples: |
     - neutral
@@ -234,6 +258,7 @@ nlu:
     - morbid
     - morose
     - im feeling abit sad
+    - sad
 - intent: mood_angry
   examples: |
     - im angry
@@ -375,6 +400,8 @@ nlu:
     - lost my wallet
     - lost a family member to corona virus
     - im feeling sad because i failed an exam
+    - im feeling sad because of lockdown
+    - lockdown
 - intent: mood_angry_reason
   examples: |
     - had a fight with
@@ -417,3 +444,6 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: nlu_fallback
+  examples: |
+    - yes

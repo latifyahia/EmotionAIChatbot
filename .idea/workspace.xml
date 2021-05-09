@@ -24,11 +24,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/css/components/about.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/staticfiles/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotionData.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/nlu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/stories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/domain.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rasa/story_graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/story_graph.dot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +109,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.views">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="quickstart-script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ChatBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -257,6 +272,8 @@
       <workItem from="1620258020073" duration="4000" />
       <workItem from="1620392801018" duration="7099000" />
       <workItem from="1620431761414" duration="3508000" />
+      <workItem from="1620509352805" duration="16431000" />
+      <workItem from="1620529477102" duration="760000" />
     </task>
     <servers />
   </component>
@@ -276,10 +293,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620072287734">
+    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1620529068920">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1620072287734" />
+    <state x="1444" y="501" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3440.1400/-1920.152.1920.1040@0.0.3440.1400" timestamp="1620529068920" />
     <state x="1500" y="454" key="FileChooserDialogImpl" timestamp="1619486479568">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
