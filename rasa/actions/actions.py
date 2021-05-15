@@ -8,8 +8,10 @@
 # This is a simple example for a custom action which utters "Hello World!"
 import time
 from asyncio import BaseEventLoop
+import datetime
 from urllib import request
 
+import pause as pause
 from azure.cognitiveservices.vision.face import FaceClient
 from azure.cognitiveservices.vision.face.models import FaceAttributeType
 from msrest.authentication import CognitiveServicesCredentials
@@ -106,6 +108,7 @@ class ActionRandom(Action):
             return []
 
 class ActionCheckEmotion(Action):
+
     def name(self) -> Text:
         return "action_check_emotion"
 
@@ -117,8 +120,8 @@ class ActionCheckEmotion(Action):
             emotion = jsonData[0]['currentEmotion']
             if (emotion=='Happy'):
                 dispatcher.utter_message(text="I can see you're feeling better now! Looks like im doing my job")
-
             else:
                 dispatcher.utter_message(text="Did that help you?")
+
 
             return []

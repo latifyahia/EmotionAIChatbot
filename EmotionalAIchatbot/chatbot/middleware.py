@@ -18,3 +18,7 @@ class CustomCorsMiddleware:
         # the view is called.
 
         return response
+
+
+
+    

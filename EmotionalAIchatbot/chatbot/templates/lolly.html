@@ -773,18 +773,31 @@
                 }
 
                 console.log(emotion)
+                // //sending the emotion to my json server so i can use in rasa
+                // axios.put('http://localhost:3000/emotion/1', {
+                //     currentEmotion: emotion
+                // }).then(resp => {
+                //
+                //     console.log(resp.data);
+                // }).catch(error => {
+                //
+                //     console.log(error);
+                // });
+
                 //sending the emotion to my json server so i can use in rasa
-                axios.put('http://localhost:3000/emotion/1', {
-                    currentEmotion: emotion
-                }).then(resp => {
-
-                    console.log(resp.data);
-                }).catch(error => {
-
-                    console.log(error);
+                $.ajax({
+                    type: "PUT",
+                    url: "http://localhost:3000/emotion/1",
+                    data:{
+                        currentEmotion: emotion,
+                    },
+                    datatype:'json',
+                    success: function(data) {
+                        if (data['success'])
+                            console.log("Emotion successfully to json server")
+                    }
                 });
-
-                //sending the emotion to my views.py so i can save the emotions with the current logged in user
+                //sending the emotion to my views.py so i can save the emotions with the current logged in user to djangos DB
                 $.ajax({
                     type: "POST",
                     url: "/updateEmotions/",

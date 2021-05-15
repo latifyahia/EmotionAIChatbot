@@ -512,35 +512,35 @@ stories:
 
 
 
-- story: interactive_story_1
-  steps:
-  - intent: cute_animal_picture
-  - action: utter_cute_animal_picture
-  - action: action_check_emotion
-  - intent: deny
-  - action: utter_try_again_movie_joke
-  - intent: funny_joke
-  - action: action_random_joke
-  - action: action_check_emotion
-  - intent: affirm
-  - action: utter_anything_else
-  - intent: deny
-  - action: utter_goodbye
-
-
-- story: cute_animal_gif_not_helped_funny_joke_yes
-  steps:
-    - intent: cute_animal_picture
-    - action: utter_cute_animal_picture
-    - action: action_check_emotion
-    - intent: deny
-    - action: utter_try_again_movie_joke
-    - intent: funny_joke
-    - action: action_random_joke
-    - action: action_check_emotion
-    - intent: affirm
-    - action: utter_anything_else
-    - intent: deny
-    - action: utter_goodbye
+#- story: interactive_story_1
+#  steps:
+#  - intent: cute_animal_picture
+#  - action: utter_cute_animal_picture
+#  - action: action_check_emotion
+#  - intent: deny
+#  - action: utter_try_again_movie_joke
+#  - intent: funny_joke
+#  - action: action_random_joke
+#  - action: action_check_emotion
+#  - intent: affirm
+#  - action: utter_anything_else
+#  - intent: deny
+#  - action: utter_goodbye
+#
+#
+#- story: cute_animal_gif_not_helped_funny_joke_yes
+#  steps:
+#    - intent: cute_animal_picture
+#    - action: utter_cute_animal_picture
+#    - action: action_check_emotion
+#    - intent: deny
+#    - action: utter_try_again_movie_joke
+#    - intent: funny_joke
+#    - action: action_random_joke
+#    - action: action_check_emotion
+#    - intent: affirm
+#    - action: utter_anything_else
+#    - intent: deny
+#    - action: utter_goodbye
 
 

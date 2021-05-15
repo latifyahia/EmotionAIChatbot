@@ -28,7 +28,7 @@ urlpatterns = [
     path('about/', about),
     path('profile/', profile),
     path('updateEmotions/', updateEmotions),
-    path('register/', v.register, name='register'),
-    path('', include('django.contrib.auth.urls')),
+    path('register/', v.register, name='register'), # url for registration and assigning the url to an function inside view.py
+    path('', include('django.contrib.auth.urls')), # url for /login , /logout
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -24,13 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1020b740-abe6-47c6-8dd4-11141a1ed57a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/chatbot/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/EmotionalAIchatbot/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emotionData.json" beforeDir="false" afterPath="$PROJECT_DIR$/emotionData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rasa/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/actions/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/nlu.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rasa/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/data/stories.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rasa/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/domain.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasa/story_graph.dot" beforeDir="false" afterPath="$PROJECT_DIR$/rasa/story_graph.dot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +272,11 @@
       <workItem from="1620392801018" duration="7099000" />
       <workItem from="1620431761414" duration="3508000" />
       <workItem from="1620509352805" duration="16431000" />
-      <workItem from="1620529477102" duration="760000" />
+      <workItem from="1620529477102" duration="1287000" />
+      <workItem from="1620656529745" duration="1537000" />
+      <workItem from="1620833478485" duration="666000" />
+      <workItem from="1620903273468" duration="4919000" />
+      <workItem from="1621005838559" duration="15784000" />
     </task>
     <servers />
   </component>

@@ -141,7 +141,7 @@ $("#sendButton").on("click", function(e) {
 
 //==================================== Set user response =====================================
 function setUserResponse(message) {
-    var UserResponse = '<img class="userAvatar" src=' + "/static/img/userAvatar.jpg" + '><p class="userMsg">' + message + ' </p><div class="clearfix"></div>';
+    var UserResponse = '<img class="userAvatar" src=' + "/static/img/userAvatar.png" + '><p class="userMsg">' + message + ' </p><div class="clearfix"></div>';
     $(UserResponse).appendTo(".chats").show("slow");
 
     $(".usrInput").val("");

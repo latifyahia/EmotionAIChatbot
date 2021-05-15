@@ -147,8 +147,8 @@ responses:
   utter_did_that_help:
   - text: Did that help you?
   utter_anything_else:
-  - text: Great! is there anything else you would like to talk about?
-  - text: Im happy to hear. Is there anything else on your mind?
+  - text: Is there anything else you would like to talk about?
+  - text: Is there anything else on your mind?
   utter_try_again_movie_joke:
   - text: Hmm.. It seems like i could of done better. Let me try again. Which one of these items would help you cheer up?
     buttons:
@@ -189,10 +189,10 @@ responses:
     - title: Funny Movie
       payload: /funny_movie
   utter_other_resources:
-  - text: Sorry i couldnt help cheer you up! Im not giving up just yet tho. Here are some articals relating to how you cna cheer yourself up!
+  - text: Sorry i couldnt help cheer you up! Im not giving up just yet tho. Here are some articals relating to how you can cheer yourself up!
   utter_other_resources_articals:
-  - text: Here are 15 ways to cheer yourself up. [Please Click Here](https://www.goodnet.org/articles/15-little-ways-to-cheer-yourself-up)
-  - text: Here are 30 small things you can do to cheer yourself up. [Please Click Here](https://themighty.com/2018/01/coping-strategies-for-depression/)
+  - text: Here are 15 ways to cheer yourself up.   https://www.goodnet.org/articles/15-little-ways-to-cheer-yourself-up
+  - text: Here are 30 small things you can do to cheer yourself up.   https://themighty.com/2018/01/coping-strategies-for-depression/
   utter_happy:
   - text: Great, tell me about your day!
   utter_unhappy:
